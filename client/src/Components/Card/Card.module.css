@@ -1,0 +1,41 @@
+
+.div_general_card{
+display: flex;
+flex-direction: column;
+border: 1px solid red;
+width: 200px;
+height: 350px;
+margin-right: 30px;
+margin-left: 30px;
+justify-content: center;
+align-items: center;
+}
+
+.div_img_pokemon{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(230, 255, 3);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    justify-content: center;
+    box-shadow: 0 0 8px 4px #eed709af;
+    
+}
+.img_pokemon{
+    width: 80px;
+    height: 90px;
+}
+
+.div_types{
+    display: flex;
+
+}
+
+.div_types div{
+    padding-right: 7px;
+    padding-left: 7px;
+}

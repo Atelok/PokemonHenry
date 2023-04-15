@@ -1,0 +1,18 @@
+
+.div_NavBar{
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Nav_Bar{
+    color: antiquewhite;
+}
+
+.HoFoAb{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -1,0 +1,4 @@
+export const GET_ALL_POKEMONS = "GET_ALL_POKEMONS"
+export const GET_POKEMON_ID = "GET_POKEMON_ID"
+export const SET_PAGE = "SET_PAGE"
+export const PREVIOUS_PAGE = "PREVIOUS_PAGE"

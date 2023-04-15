@@ -2,7 +2,6 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
-const { type } = require('os');
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 
 const sequelize = new Sequelize(
@@ -53,6 +52,6 @@ Type.belongsToMany(Pokemon, {through: "PokemonType"} );
 // Product.hasMany(Reviews);
 
 module.exports = {
-   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
+   ...sequelize.models, // para poder importar los  modelos así: const { Product, User } = require('./db.js');
    conn: sequelize, // para importart la conexión { conn } = require('./db.js');
 };

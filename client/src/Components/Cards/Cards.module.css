@@ -1,0 +1,28 @@
+
+.div_general{
+    display: flex;
+    border: 1px solid yellowgreen;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    padding-left: 100px;
+    margin-left: 140px;
+    padding-top: 10px;
+}
+
+.justi_div{
+    margin-top: 20px;
+    padding-top: 10px;
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.cada_div{
+    padding-top: 10px ;
+    padding-bottom: 10px;
+}

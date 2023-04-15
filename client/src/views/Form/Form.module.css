@@ -1,0 +1,15 @@
+
+/* AQUI ES EL DIV GENERAL DE EL FORMULARIO */
+.div_generalDelForm{
+background-color: aqua;
+height: 100vh;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.loquecontieneel_Form{
+    background-color: blueviolet;
+}
