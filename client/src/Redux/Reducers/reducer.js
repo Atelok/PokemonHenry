@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE } from "../Actions/TypeActions"
+import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE } from "../Actions/TypeActions"
 
 
 
@@ -7,6 +7,7 @@ const initialState = {
     allPokemon: [],
     currentPage: 0,
     pokemonsPerPage:12,
+    seeMewImage: false
     
 }
 
@@ -23,7 +24,8 @@ const rootReducer = (state = initialState, action) => {
         case SET_PAGE:
             return { ...state, currentPage: action.payload};
 
-
+        case SEE_IMAGE:
+            return {...state, seeMewImage: action.payload }
 
         default:
             return { ...state }

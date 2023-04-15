@@ -43,23 +43,24 @@ const Form = () => {
     const validate = (form)=>{
 
         //validacion para name
-        /^[a-zA-Z]+$/.test(form.name) ? setErrors({...errors, name: "" }):setErrors({...errors, name: "No esta correcto" });
-        form.name && setErrors({...errors, name: "Debe introducir un nombre" })
+        if (form.name) {
+            /^[a-zA-Z]+$/.test(form.name) ? setErrors({...errors, name: "" }):setErrors({...errors, name: "No esta correcto" });
+            !form.name && setErrors({...errors, name: "Debe introducir un nombre" });
+        }
+        if (form.image) {
+            /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(form.image) ? setErrors({...errors, email: "" }):setErrors({...errors, email: "Colocar un Imagen correcta" });
+            !form.image && setErrors({...errors, name: "Debe colocar una imagen" });
+        }
+
+
     }
 
     const submitHandler = (event)=> {
         event.preventDefault();
         axios.post("http://localhost:3001/pokemons/", form)
         .then((res)=>alert(res))
-
+        .catch((err)=> alert(err))
     }
-
-
-    
-    // const pushCreatePoke = async() => {
-    //     const json = await axios.get()
-
-    // }
 
     return (
         <div className={style.div_generalDelForm}>
@@ -76,6 +77,7 @@ const Form = () => {
                 <div>
                     <label htmlFor=""> * Inserte una imagen: </label>
                     <input type="text" name="image" value={form.image} onChange={valueInputhandler}/>
+
                 </div>
 
                 <div>

@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom"
-import style from "./Landing.module.css"
-import gotta from "./img/Logo y frase -Pokemon.png"
-import Article from "./ArticlePok/ArticlePok"
+import { useSelector, useDispatch } from "react-redux"
+import { useEffect } from "react"
 import { Howl } from "howler"
+import Article from "./ArticlePok/ArticlePok"
+import gotta from "./img/Logo y frase -Pokemon.png"
+import mewPoke from "./img/mew-Poke.png"
 import soundFile from "./sound/sonidoPika.mp3"
-
+import { seeImage } from "../../Redux/Actions/action"
+import style from "./Landing.module.css"
 
 
 
@@ -22,7 +25,20 @@ const Landing = () => {
         });
         sound.play();
     }
-    //
+
+
+    //APARECER A MEW
+
+    const seeMewImage = useSelector((state) => state.seeMewImage)
+    const dispatch = useDispatch();
+    useEffect(() => {
+        const temporizador = setTimeout(() => {
+            dispatch(seeImage())
+        }, 5000)
+
+
+    }, [])
+
 
 
 
@@ -51,6 +67,8 @@ const Landing = () => {
                 <Article />
             </div>
 
+            {/* para mostrar a meow-temporizador */}
+            {seeMewImage && <div className={style.div_img_mew}><img className={style.mew} src={mewPoke} alt="" /></div>}
         </header>
     )
 

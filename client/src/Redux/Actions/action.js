@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE } from "./TypeActions"
+import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE } from "./TypeActions"
 import axios from "axios"
 
 
@@ -31,6 +31,9 @@ const setCurrentPage = (info)=>{
     return { type: SET_PAGE, payload: info}
 }
 
+const seeImage = ()=>{
+    return { type: SEE_IMAGE, payload: true}
+}
 
 
 
@@ -38,5 +41,6 @@ const setCurrentPage = (info)=>{
 export {
     getAllPokemons,
     getPokemonId,
-    setCurrentPage
+    setCurrentPage,
+    seeImage
 }

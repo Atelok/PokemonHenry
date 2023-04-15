@@ -4,6 +4,10 @@ body {
     overflow-x: hidden;
 }
 
+
+
+
+
 /* EL HEADER QUE ESTA TODO */
 .header_landing {
     padding-top: 25vh;
@@ -15,9 +19,36 @@ body {
     flex-direction: row;
 }
 
-.gotta_div1{
-   
+
+
+
+/*efecto mew*/
+
+.div_img_mew {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    top: 200px;
+    left: 400px;
 }
+
+.mew {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    /* transition: transform 1s ease-in-out;
+    transform: scale(0.5); */
+}
+
+
+
+/**/
+
+
+
+
+
 
 .gotta_div1 img {
     width: 500px;
@@ -25,11 +56,11 @@ body {
 }
 
 /* EL DIV QUE CONTIENE LO DE ABAJO 1*/
-.div_superior{
+.div_superior {
     display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /* EL DIV QUE CONTIENE LO DE ABAJO 2*/
@@ -53,8 +84,8 @@ flex-direction: column;
 
 /*--------------------------------*/
 
-.divArticle{
+.divArticle {
     display: flex;
     padding-left: 20px;
-    
+
 }
