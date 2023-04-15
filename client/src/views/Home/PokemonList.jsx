@@ -33,7 +33,7 @@ const PokemonList = ({ allPokemon, onPageChange }) => {
             </button>
             <button
                 onClick={handleNextPage}
-                disabled={end > allPokemon.length}
+                disabled={end > allPokemon.length-1}
             >
                 NEXT
             </button>

@@ -25,7 +25,7 @@ const getPokemonId = (id)=>{
 };
 
 
-//! NO RETORNA BIEN LA INFORMACION DE TYPES
+//TIPOS POKEMON
 const getTypes = ()=>{
 
     return async function(dispatch){
@@ -35,34 +35,25 @@ const getTypes = ()=>{
     }
 };
 
-
+//PASAR DE PAGINA
 const setCurrentPage = (info)=>{
     return { type: SET_PAGE, payload: info}
 };
 
-
+//VER A MEW
 const seeImage = ()=>{
     return { type: SEE_IMAGE, payload: true}
 };
 
-
+// VER ORDENADOS 
 const orderPokemons = (AscDesc)=> {
-
     return {type: ORDER_POKEMONS, payload: AscDesc}
 };
 
-
-
-
-
-
+// FILTRAR POKEMON POR TIPO, EN typesPokemon VIENE EL TIPO
 const filterPokemon = (typesPokemon)=>{
-
-    return async function(){
-        const json = await axios.get("http://localhost:3001/types")
-        const type = json.data
-        return {type: FILTER_POKEMONS, payload: type}
-    }
+        return {type: FILTER_POKEMONS, payload: typesPokemon}
+    
 }
 
 
