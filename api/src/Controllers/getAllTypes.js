@@ -11,7 +11,7 @@ const getAllTypes = async ()=>{
     const allTypes = type.results.map((typ)=>typ.name)
     
     allTp(allTypes)
-
+    
     return allTypes
     // const createName = (all)=>{
     //     all.map((allT)=> {

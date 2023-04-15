@@ -12,10 +12,7 @@ const id = ""
 
 const getPokemonHandler = (event)=>{
 
-
 }
-
-
 
     return(
         <div>
