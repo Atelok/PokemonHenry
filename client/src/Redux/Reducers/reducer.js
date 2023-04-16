@@ -72,9 +72,9 @@ const rootReducer = (state = initialState, action) => {
 
         //BUSQUEDA POR NOMBRE
         case SEARCH_BY_NAME:
-            // const name = state.filterPokemon.filter((poke)=> poke.name=== action.payload)
             return {...state, allPokemon: [action.payload]}
 
+            
         default:
             return { ...state }
     }

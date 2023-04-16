@@ -68,6 +68,8 @@ const ourPokemons = (pokemon)=>{
     return {type: OURS_YOURS_POKEMONS, payload: pokemon}
 }
 
+
+//FILTRADO POR QUERY NAMES
 const searchName = (name)=>{
 
     return async function(dispatch){
@@ -76,6 +78,8 @@ const searchName = (name)=>{
         return dispatch({type: SEARCH_BY_NAME, payload: pokemon})
     }
 }
+
+
 
 
 

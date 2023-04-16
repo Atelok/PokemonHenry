@@ -10,12 +10,14 @@ const SearchBar = () => {
   const [id, setId] = useState("")
 
 
+
+  //MI HANDLE PARA SOBREESCRIBIR EL ESTADO LOCAL ID
   function handleChange(events) {
     setId(events.target.value)
 }
 
 
-
+// MI HANDLE PARA HACER DISPATCH DE MI ACTION FUNCION CON EL "ID"
   const getPokemonHandler = () => {
 
     dispatch(searchName(id))
