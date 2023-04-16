@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON, FILTER_ATAQUE, OURS_YOURS_POKEMONS } from "./TypeActions"
+import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON, FILTER_ATAQUE, OURS_YOURS_POKEMONS, SEARCH_BY_NAME } from "./TypeActions"
 import axios from "axios"
 
 
@@ -68,6 +68,11 @@ const ourPokemons = (pokemon)=>{
     return {type: OURS_YOURS_POKEMONS, payload: pokemon}
 }
 
+const searchName = (name)=>{
+    return {type: SEARCH_BY_NAME, payload: name}
+}
+
+
 
 
 export {
@@ -79,5 +84,6 @@ export {
     filterPokemon,
     getTypes,
     filterAtaque,
-    ourPokemons
+    ourPokemons,
+    searchName
 }

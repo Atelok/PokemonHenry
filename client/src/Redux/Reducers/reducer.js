@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON, FILTER_ATAQUE, OURS_YOURS_POKEMONS } from "../Actions/TypeActions"
+import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON, FILTER_ATAQUE, OURS_YOURS_POKEMONS, SEARCH_BY_NAME } from "../Actions/TypeActions"
 
 
 
@@ -14,7 +14,7 @@ const initialState = {
 
 
 const rootReducer = (state = initialState, action) => {
-console.log(state.allPokemon);
+
     switch (action.type) {
         
         //OBTENER POKEMON
@@ -68,6 +68,12 @@ console.log(state.allPokemon);
         const whoIsIt = action.payload === "Mypokemons" ?  [...state.filterPokemon.filter((pokemon)=> pokemon.create === false)] : [...state.filterPokemon.filter((pokemon)=> pokemon.create === true)]  
         
             return {...state, allPokemon: whoIsIt}
+
+
+        //BUSQUEDA POR NOMBRE
+        case SEARCH_BY_NAME:
+            const name = state.filterPokemon.filter((poke)=> poke.name=== action.payload)
+            return {...state, allPokemon: name}
 
         default:
             return { ...state }

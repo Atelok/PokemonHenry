@@ -1,36 +1,41 @@
-import { useState, useEffect } from "react"
-import { useSelector, useDispatch } from "react-redux"
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { searchName } from "../../Redux/Actions/action";
+
+const SearchBar = () => {
+  // const onePoke = useSelector((poke) => poke.allPokemon);
+  const dispatch = useDispatch();
 
 
-
-const SearchBar = ()=>{
-
-    const onePoke = useSelector((poke)=> poke.allPokemon)
+  const [id, setId] = useState("")
 
 
-const id = ""
-
-const getPokemonHandler = (event)=>{
-
+  function handleChange(events) {
+    setId(events.target.value)
 }
 
-    return(
-        <div>
-            <div>
-                <button>Random</button>
-
-                <input type="text" value=""/>
-
-                <button onClick={getPokemonHandler}>Search</button>
 
 
-            </div>
+  const getPokemonHandler = () => {
 
-        </div>
+    dispatch(searchName(id))
+  };
 
-    )
 
-}
 
-export default SearchBar
 
+
+  return (
+    <div>
+      <div>
+        <button>Random</button>
+
+        <input type="text" value={id} onChange={handleChange}/>
+
+        <button onClick={getPokemonHandler}>Search</button>
+      </div>
+    </div>
+  );
+};
+
+export default SearchBar;
