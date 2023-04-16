@@ -18,12 +18,7 @@ const Card = ({ id, name, image, Types }) => {
                         <div>{Types[0]}</div>
                         <div>{Types[1]}</div>
                     </>
-                ) : (
-                    <>
-                    <div>{Types[0].name}</div>
-                    <div>{Types[1].name}</div>
-                    </>
-                )
+                ) : ("")
                 }
 
 

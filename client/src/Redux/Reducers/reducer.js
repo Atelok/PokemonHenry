@@ -16,21 +16,27 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
 console.log(state.allPokemon);
     switch (action.type) {
+        
         //OBTENER POKEMON
         case GET_ALL_POKEMONS:
             return { ...state, allPokemon: action.payload , filterPokemon: action.payload};
+
+        
         //OBTENET POKEMON POR ID
         case GET_POKEMON_ID:
             return { ...state, allPokemon: action.payload};
 
+        
         //PAGINADO
         case SET_PAGE:
             return { ...state, currentPage: action.payload};
 
+        
         //IMAGEN MEW
         case SEE_IMAGE:
             return {...state, seeMewImage: action.payload };
 
+        
         //ORDENAR POKEMON DE A-Z / Z-A / REFRESCAR TODO
         case ORDER_POKEMONS:
             if (action.payload === "refreshAll") {
@@ -39,32 +45,15 @@ console.log(state.allPokemon);
             const order = action.payload === "Ascendente"? [...state.allPokemon.sort((a, b)=> a.name.localeCompare(b.name))]: [...state.allPokemon.sort((a, b)=> b.name.localeCompare(a.name))]
             return {...state, allPokemon: order};
         
+        
         // PARA PONER LOS TIPOS POKEMONS EN EL GLOBAL
         case TYPES_POKEMON:
             return {...state, typesPokemon: action.payload };
         
 
-
-
-
         //FILTRAR POR TIPOS
         case FILTER_POKEMONS:
-        // const sameType = state.filterPokemon.filter((typ)=>typ.types[0]===action.payload || typ.types[1]===action.payload || typ.Types[0].name===action.payload || typ.Types[1].name===action.payload)
-        //!
-        // const newArrayPokemon = allPokemon.
-
-
-        const sameType = state.filterPokemon.forEach((poke)=>{
-
-            poke.types = poke.Types
-            delete poke.Types
-
-
-
-
-        
-        })
-
+        const sameType = state.filterPokemon.filter((typ)=>typ.Types[0]===action.payload || typ.Types[1]===action.payload)
         return {...state, allPokemon: sameType }
 
 
