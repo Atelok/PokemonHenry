@@ -69,7 +69,12 @@ const ourPokemons = (pokemon)=>{
 }
 
 const searchName = (name)=>{
-    return {type: SEARCH_BY_NAME, payload: name}
+
+    return async function(dispatch){
+        const json = await axios.get(`http://localhost:3001/pokemons/name?name=${name}`)
+        const pokemon = json.data
+        return dispatch({type: SEARCH_BY_NAME, payload: pokemon})
+    }
 }
 
 
