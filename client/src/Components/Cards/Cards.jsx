@@ -11,11 +11,11 @@ const Cards = ({pokemonsToShow})=>{
 
         <div className={style.justi_div}>
             { pokemonsToShow.map((poke, index)=>{
-                const {id, name, image, types, Types} = poke
+                const {id, name, image, Types} = poke
 
                 return(
                     <div className={style.cada_div} key={index}>
-                        <Card id={id} name={name} image={image} types={types} Types={Types}/>
+                        <Card id={id} name={name} image={image} Types={Types}/>
                     </div>
                 )
             })}

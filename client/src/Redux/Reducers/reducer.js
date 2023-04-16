@@ -14,7 +14,7 @@ const initialState = {
 
 
 const rootReducer = (state = initialState, action) => {
-console.log(state.filterPokemon.filter((typ)=>typ.types===action.payload));
+console.log(state.allPokemon);
     switch (action.type) {
         //OBTENER POKEMON
         case GET_ALL_POKEMONS:
@@ -43,10 +43,30 @@ console.log(state.filterPokemon.filter((typ)=>typ.types===action.payload));
         case TYPES_POKEMON:
             return {...state, typesPokemon: action.payload };
         
+
+
+
+
         //FILTRAR POR TIPOS
         case FILTER_POKEMONS:
-        const sameType = state.filterPokemon.filter((typ)=>typ.types[0]===action.payload || typ.types[1]===action.payload)
+        // const sameType = state.filterPokemon.filter((typ)=>typ.types[0]===action.payload || typ.types[1]===action.payload || typ.Types[0].name===action.payload || typ.Types[1].name===action.payload)
+        //!
+        // const newArrayPokemon = allPokemon.
+
+
+        const sameType = state.filterPokemon.forEach((poke)=>{
+
+            poke.types = poke.Types
+            delete poke.Types
+
+
+
+
+        
+        })
+
         return {...state, allPokemon: sameType }
+
 
 
         default:
@@ -61,3 +81,20 @@ console.log(state.filterPokemon.filter((typ)=>typ.types===action.payload));
 
 
 export default rootReducer
+
+
+    // para filtrado, posible solucion
+   // const pokeType =[];
+
+            // if (Array.isArray(poke.types)) {
+                
+            //     if (poke.types[0] === action.payload || poke.types[1] === action.payload) {
+            //         pokeType.push(poke)
+            //     }
+                
+            // }else{
+            //     if (poke.Types[0].name===action.payload || poke.Types[1].name===action.payload) {
+            //         pokeType.push(poke)
+            //     }
+            // }
+            // return pokeType

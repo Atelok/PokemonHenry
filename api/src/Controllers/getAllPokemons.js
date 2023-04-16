@@ -11,9 +11,12 @@ const getAllPokemons = async () => {
             through:{ attributes:[]} 
         }]
         })
+    const pokeDex = pokeBdd.map((poke)=>{
+        return {...poke.toJSON(), Types: poke.Types.map(type => type.name)}
 
+    })
 
-    for (let i = 1; i <= 60; i++) {
+    for (let i = 1; i <= 20; i++) {
 
         let pokeUrl = `https://pokeapi.co/api/v2/pokemon/${i}`
         arrayPokeUrl.push(pokeUrl)
@@ -35,14 +38,14 @@ const getAllPokemons = async () => {
                     velocity: stats[5].base_stat,
                     height,
                     weight,
-                    types: types.map((typ)=> typ.type.name),
+                    Types: types.map((typ)=> typ.type.name),
                     create: false
                 }
             })
     })
     let pokeApi = Promise.all(mapeamos) 
 
-    return (await pokeApi).concat(pokeBdd)
+    return (await pokeApi).concat(pokeDex)
 }
 module.exports = getAllPokemons;
 

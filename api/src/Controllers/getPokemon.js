@@ -28,7 +28,7 @@ const getPokemonByiD = async (idPokemon, verify) => {
                         velocity: stats[5].base_stat,
                         height,
                         weight,
-                        types: typ,
+                        Types: typ,
                         create: false
                     }
                 })
@@ -45,9 +45,10 @@ const getPokemonByiD = async (idPokemon, verify) => {
                 through:{ attributes:[]} 
             }]
             });
+            const pokeDex = {...pokem.toJSON(), Types: pokem.Types.map((typ)=> typ.name)}
 
             if (pokem) {
-                return pokem
+                return pokeDex
             }
             else {
                 throw new Error("No se ha creado aún ese Pokémon");

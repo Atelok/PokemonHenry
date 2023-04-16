@@ -1,6 +1,6 @@
 import style from "./Card.module.css"
 
-const Card = ({ id, name, image, types, Types }) => {
+const Card = ({ id, name, image, Types }) => {
     return (
         <div className={style.div_general_card}>
             <div className={style.div_img_pokemon}>
@@ -13,10 +13,10 @@ const Card = ({ id, name, image, types, Types }) => {
             <br />
             <div className={style.div_types}>
                 {/* AQUI VA LA VERIFICACION DE types y Types */}
-                {Array.isArray(types) ? (
+                {typeof Types[0] === "string" ? (
                     <>
-                        <div>{types[0]}</div>
-                        <div>{types[1]}</div>
+                        <div>{Types[0]}</div>
+                        <div>{Types[1]}</div>
                     </>
                 ) : (
                     <>

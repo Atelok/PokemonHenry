@@ -13,11 +13,17 @@ const getPokemonByName = async (name2) => {
                     model: Type, 
                     attributes:["name"],    
                     through:{ attributes:[]} 
-                    }] 
-                })
-
+                    }]
+                } )
         if (pokemon.length) {
-            return [...pokemon]
+
+            const formattedPokemon = pokemon.map(poke => {
+                return {
+                    ...poke.toJSON(),
+                    Types: poke.Types.map(type => type.name)
+                };
+            });
+            return formattedPokemon;
         }
         else {
 
@@ -37,7 +43,7 @@ const getPokemonByName = async (name2) => {
                 velocity: data.stats[5].base_stat,
                 height: data.height,
                 weight: data.weight,
-                types: data.types.map((typ)=> typ.type.name),
+                Types: data.types.map((typ)=> typ.type.name),
                 create: false
             };
         }
