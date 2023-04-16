@@ -28,25 +28,24 @@ const getPokemonByName = async (name2) => {
         else {
 
             const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name2}`);
-            if (data.name !== name2) {
-                throw new Error("Colocar el nombre correctamente");
-            }
-            else{
-
+            
+            if (data.name.includes(name2)) {
                 return {
-                id: data.id,
-                name: data.name,
-                image: data.sprites.other.dream_world.front_default,
-                life: data.stats[0].base_stat,
-                attack: data.stats[1].base_stat,
-                defense: data.stats[2].base_stat,
-                velocity: data.stats[5].base_stat,
-                height: data.height,
-                weight: data.weight,
-                Types: data.types.map((typ)=> typ.type.name),
-                create: false
-            };
-        }
+                            id: data.id,
+                            name: data.name,
+                            image: data.sprites.other.dream_world.front_default,
+                            life: data.stats[0].base_stat,
+                            attack: data.stats[1].base_stat,
+                            defense: data.stats[2].base_stat,
+                            velocity: data.stats[5].base_stat,
+                            height: data.height,
+                            weight: data.weight,
+                            Types: data.types.map((typ)=> typ.type.name),
+                            create: false
+                        };
+            }else{
+                throw new Error("Colocar el nombre correctamente");}
+
         }
     } catch (error) {
         throw new Error("Colocar el nombre correctamente");
@@ -61,6 +60,27 @@ const getPokemonByName = async (name2) => {
     
 
 
+        //     if (data.name !== name2) {
+        //         throw new Error("Colocar el nombre correctamente");
+        //     }
+        //     else{
+
+        //         return {
+        //         id: data.id,
+        //         name: data.name,
+        //         image: data.sprites.other.dream_world.front_default,
+        //         life: data.stats[0].base_stat,
+        //         attack: data.stats[1].base_stat,
+        //         defense: data.stats[2].base_stat,
+        //         velocity: data.stats[5].base_stat,
+        //         height: data.height,
+        //         weight: data.weight,
+        //         Types: data.types.map((typ)=> typ.type.name),
+        //         create: false
+        //     };
+        // }
+
+    //----------------------------------
 
 
     // if (name2) {
