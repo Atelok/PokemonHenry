@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { searchName } from "../../Redux/Actions/action";
+import { searchName, getPokemonId } from "../../Redux/Actions/action";
 
 const SearchBar = () => {
   // const onePoke = useSelector((poke) => poke.allPokemon);
@@ -24,14 +24,19 @@ const SearchBar = () => {
   };
 
 
-  
+//MI HANDLE PARA RANDOMEAR POKEMONS
+  const getRandomPokemon = ()=>{
+    const random = Math.floor(Math.random()*1010)
+    console.log(random);
+    dispatch(getPokemonId(random))
+  }
 
 
 
   return (
     <div>
       <div>
-        <button >Random</button>
+        <button onClick={getRandomPokemon}>Random</button>
 
         <input type="text" value={name} onChange={handleChange}/>
 

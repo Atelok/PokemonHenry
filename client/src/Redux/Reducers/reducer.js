@@ -24,7 +24,7 @@ const rootReducer = (state = initialState, action) => {
         
         //OBTENET POKEMON POR ID
         case GET_POKEMON_ID:
-            return { ...state, allPokemon: action.payload};
+            return { ...state, allPokemon: [action.payload]};
 
         
         //PAGINADO
