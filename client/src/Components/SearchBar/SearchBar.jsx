@@ -7,32 +7,33 @@ const SearchBar = () => {
   const dispatch = useDispatch();
 
 
-  const [id, setId] = useState("")
+  const [name, setName] = useState("")
 
 
 
   //MI HANDLE PARA SOBREESCRIBIR EL ESTADO LOCAL ID
   function handleChange(events) {
-    setId(events.target.value)
+    setName(events.target.value)
 }
 
 
 // MI HANDLE PARA HACER DISPATCH DE MI ACTION FUNCION CON EL "ID"
   const getPokemonHandler = () => {
 
-    dispatch(searchName(id))
+    dispatch(searchName(name))
   };
 
 
+  
 
 
 
   return (
     <div>
       <div>
-        <button>Random</button>
+        <button >Random</button>
 
-        <input type="text" value={id} onChange={handleChange}/>
+        <input type="text" value={name} onChange={handleChange}/>
 
         <button onClick={getPokemonHandler}>Search</button>
       </div>
