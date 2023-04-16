@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON } from "../Actions/TypeActions"
+import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON, FILTER_ATAQUE, OURS_YOURS_POKEMONS } from "../Actions/TypeActions"
 
 
 
@@ -54,9 +54,20 @@ console.log(state.allPokemon);
         //FILTRAR POR TIPOS
         case FILTER_POKEMONS:
         const sameType = state.filterPokemon.filter((typ)=>typ.Types[0]===action.payload || typ.Types[1]===action.payload)
-        return {...state, allPokemon: sameType }
+            return {...state, allPokemon: sameType };
 
 
+        //FILTRAR POR ATAQUE
+        case FILTER_ATAQUE:
+        const filtAttack = action.payload === "mayorAtaque"? [...state.allPokemon.sort((a, b)=>b.attack-a.attack)] : [...state.allPokemon.sort((a, b)=>a.attack-b.attack)]  
+            return {...state, allPokemon: filtAttack}
+
+
+        //FILTRAR POR PERTENENCIA DE POKEMONS
+        case OURS_YOURS_POKEMONS:
+        const whoIsIt = action.payload === "Mypokemons" ?  [...state.filterPokemon.filter((pokemon)=> pokemon.create === false)] : [...state.filterPokemon.filter((pokemon)=> pokemon.create === true)]  
+        
+            return {...state, allPokemon: whoIsIt}
 
         default:
             return { ...state }

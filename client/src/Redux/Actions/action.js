@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON } from "./TypeActions"
+import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON, FILTER_ATAQUE, OURS_YOURS_POKEMONS } from "./TypeActions"
 import axios from "axios"
 
 
@@ -57,6 +57,17 @@ const filterPokemon = (typesPokemon)=>{
 }
 
 
+//FILTRADO POR ATAQUE
+const filterAtaque = (ataque)=>{
+    return {type: FILTER_ATAQUE, payload: ataque}
+}
+
+
+//FILTRADO PARA LOS POKEMONS DE LA API Y LOS CREADOS
+const ourPokemons = (pokemon)=>{
+    return {type: OURS_YOURS_POKEMONS, payload: pokemon}
+}
+
 
 
 export {
@@ -66,5 +77,7 @@ export {
     seeImage,
     orderPokemons,
     filterPokemon,
-    getTypes
+    getTypes,
+    filterAtaque,
+    ourPokemons
 }

@@ -16,7 +16,7 @@ const getAllPokemons = async () => {
 
     })
 
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 1; i <= 30; i++) {
 
         let pokeUrl = `https://pokeapi.co/api/v2/pokemon/${i}`
         arrayPokeUrl.push(pokeUrl)

@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { orderPokemons } from "../../Redux/Actions/action";
+import { orderPokemons, filterAtaque } from "../../Redux/Actions/action";
 
 const OrderPokemon = () => {
 
@@ -10,7 +10,10 @@ const OrderPokemon = () => {
         dispatch(orderPokemons(AscDesc))
     }
 
-
+    const filterAtaqueHandler = (event)=>{
+        const ataque = event.target.name
+        dispatch(filterAtaque(ataque))
+    }
 
     return (
         <div>
@@ -20,6 +23,12 @@ const OrderPokemon = () => {
                 <button name="Ascendente" onClick={filterHandler}>A-Z</button>
                 <button name="Descendente" onClick={filterHandler}>Z-A</button>
             </div>
+
+            <div>
+                <button name="menorAtaque" onClick={filterAtaqueHandler}>MENOR ATAQUE</button>
+                <button name="mayorAtaque" onClick={filterAtaqueHandler}>MAYOR ATAQUE</button>
+            </div>
+
 
         </div>
     )
