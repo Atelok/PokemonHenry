@@ -12,6 +12,13 @@ justify-content: center;
 align-items: center;
 }
 
+
+/* AQUI VA EL DIV DE NAME: NAME*/
+.nameCard{
+    display: inline-block;
+}
+/**/
+
 .div_img_pokemon{
     display: flex;
     width: 100px;

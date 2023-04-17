@@ -6,11 +6,17 @@ const Card = ({ id, name, image, Types }) => {
             <div className={style.div_img_pokemon}>
                 <img className={style.img_pokemon} src={image} alt={`Pokemons ${name}`} />
             </div>
-            <div> # {id} </div>
-            <h4> Name : </h4>
-            <h3>{name}</h3>
+            {isNaN(id)? (<div># Created </div>):(<div> # {id} </div>)}
 
-            <br />
+            <div >
+            {/* <h4> Name : </h4> */}
+            <h4>{name}</h4>
+            </div>
+            
+            <div className={style.nameCard}>
+            <h4>Types:</h4>
+            </div>
+            
             <div className={style.div_types}>
                 {/* AQUI VA LA VERIFICACION DE types y Types */}
                 {typeof Types[0] === "string" ? (
