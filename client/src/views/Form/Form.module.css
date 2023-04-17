@@ -11,5 +11,6 @@ align-items: center;
 }
 
 .loquecontieneel_Form{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
+    border: 1px solid black;
 }

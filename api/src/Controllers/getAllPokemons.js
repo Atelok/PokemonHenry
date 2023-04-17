@@ -16,7 +16,7 @@ const getAllPokemons = async () => {
 
     })
 
-    for (let i = 1; i <= 30; i++) {
+    for (let i = 1; i <= 60; i++) {
 
         let pokeUrl = `https://pokeapi.co/api/v2/pokemon/${i}`
         arrayPokeUrl.push(pokeUrl)
@@ -31,7 +31,7 @@ const getAllPokemons = async () => {
                 return {
                     id,
                     name,
-                    image: sprites.other.dream_world.front_default,
+                    image: sprites.other.dream_world.front_default || sprites.other["official-artwork"].front_default,
                     life: stats[0].base_stat,
                     attack: stats[1].base_stat,
                     defense: stats[2].base_stat,

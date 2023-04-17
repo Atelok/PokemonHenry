@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 import { orderPokemons, filterAtaque } from "../../Redux/Actions/action";
-
+import style from "./Home.module.css"
 const OrderPokemon = () => {
 
     const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const OrderPokemon = () => {
     }
 
     return (
-        <div>
+        <div className={style.orderPokemon}>
             <div><button name="refreshAll" onClick={filterHandler}>REFRESH</button></div>
 
             <div>

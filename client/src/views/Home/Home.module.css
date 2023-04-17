@@ -1,9 +1,54 @@
+html{
+    /* background-color: aqua; */
+}
+
+.PokemonList{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+
+/*AQUI VA LOS DOS FILTER Y ORDER, QUE ESTAN A LA IZQUIERDA*/
+.IzquierdaFilterOrder{
+    display: flex;
+    /* justify-content: end; */
+    flex-direction: column;
+}
+/**/
+
+
+
+
+
+/* MODULO DE FILTERPOKEMONS*/
+.Filtrados{
+/* background-color: blue; */
+display: flex;
+background-color: aquamarine;
+flex-direction: column;
+
+height: auto;
+width: 250px;
+
+position: absolute;
+
+
+}
+
+/**/
+
+
+
+
+
 .div_hola{
-    border: 1px solid rgb(13, 31, 194);
-    background-color: rgb(13, 31, 194);
+    /* border: 1px solid rgb(13, 31, 194); */
+    /* background-color: rgb(13, 31, 194); */
     display: flex;
     width: 100vw;
-    height: 93vh;
+    height: 100%;
     flex-direction: column;
     align-items: center;
 }
@@ -15,3 +60,27 @@
 
 }
 
+.div_botones{
+    /*!!*/
+    /* background-color: red; */
+    /**/
+    display: flex;
+    
+
+}
+
+
+
+/* AQUI VAN EL DIV DE LOS BOTONES DE ORDENAR */
+.orderPokemon{
+    background-color: black;
+    /* display: flex; */
+    flex-direction: row;
+    justify-content:flex-end;
+    position: absolute;
+    top: 300px;
+
+    
+    
+}
+/*-------------------------------------------*/

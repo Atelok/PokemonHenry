@@ -2,6 +2,7 @@ import Pikachu from "../img/pikachu-poke.png"
 import Esfera from "../img/Esfera-pokemon3.png"
 import style from "./ArticlePok.module.css"
 
+
 const Article = () => {
 
 return(

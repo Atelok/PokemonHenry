@@ -44,20 +44,24 @@ const Form = () => {
     const validate = (form)=>{
 
         //validacion para name
-        if (form.name) /^[a-zA-Z]+$/.test(form.name) ? setErrors({...errors, name: "" }):setErrors({...errors, name: "No esta correcto" });
+        if (form.name) /^[a-zA-Z]+$/.test(form.name) ? 
+        setErrors({...errors, name: "" })
+        :
+        setErrors({...errors, name: "No esta correcto" });
+
         else !form.name && setErrors({...errors, name: "Debe introducir un nombre" });
         
         if (form.image) /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(form.image) ? setErrors({...errors, image: "" }):setErrors({...errors, image: "Colocar un Imagen correcta" });
         else !form.image && setErrors({...errors, image: "Debe colocar una imagen" });
         
-        if (form.life) /^(?:[1-9][0-9]?|100)$/.test(form.life) ? setErrors({...errors, life: "" }):setErrors({...errors, life: "Solo se acepta números del 1 al 100" });
-        else !form.life && setErrors({...errors, life: "Colocar vida" });
+        // if (form.life) /^(?:[1-9][0-9]?|100)$/.test(form.life) ? setErrors({...errors, life: "" }):setErrors({...errors, life: "Solo se acepta números del 1 al 100" });
+        // else !form.life && setErrors({...errors, life: "Colocar vida" });
 
-        if (form.attack) /^(?:[1-9][0-9]?|100)$/.test(form.attack) ? setErrors({...errors, attack: "" }):setErrors({...errors, attack: "Solo se acepta números del 1 al 100" });
-        else !form.attack && setErrors({...errors, attack: "Colocar ataque" });
+        // if (form.attack) /^(?:[1-9][0-9]?|100)$/.test(form.attack) ? setErrors({...errors, attack: "" }):setErrors({...errors, attack: "Solo se acepta números del 1 al 100" });
+        // else !form.attack && setErrors({...errors, attack: "Colocar ataque" });
 
-        if (form.defense) /^(?:[1-9][0-9]?|100)$/.test(form.defense) ? setErrors({...errors, defense: "" }):setErrors({...errors, defense: "Solo se acepta números del 1 al 100" });
-        else !form.defense && setErrors({...errors, defense: "Colocar defensa" });
+        // if (form.defense) /^(?:[1-9][0-9]?|100)$/.test(form.defense) ? setErrors({...errors, defense: "" }):setErrors({...errors, defense: "Solo se acepta números del 1 al 100" });
+        // else !form.defense && setErrors({...errors, defense: "Colocar defensa" });
     
     }
 
@@ -66,7 +70,7 @@ const Form = () => {
     const submitHandler = (event)=> {
         event.preventDefault();
         axios.post("http://localhost:3001/pokemons/", form)
-        .then((res)=>alert(res.message))
+        .then((res)=>alert("Pokemón Creado"))
         .catch((err)=> alert(err))
     }
 
@@ -74,36 +78,40 @@ const Form = () => {
         <div className={style.div_generalDelForm}>
 
             <div>Crearemos nuestro Pokemón</div>
+            
 
             <form className={style.loquecontieneel_Form} onSubmit={submitHandler}> 
                 <div>
-                    <label htmlFor="">  Ingresa un nombre*: </label>
+                    <label htmlFor="">  Ingresa un nombre(*): </label>
                     <input type="text" name="name" value={form.name} onChange={valueInputhandler} />
                     {errors.name &&<span>{errors.name}</span>}
                 </div>
 
                 <div>
-                    <label htmlFor="">  Inserte una imagen*: </label>
+                    <label htmlFor="">  Inserte una imagen(*): </label>
                     <input type="text" name="image" value={form.image} onChange={valueInputhandler}/>
                     {errors.image &&<span>{errors.image}</span>}
                 </div>
 
                 <div>
-                    <label htmlFor="">  Vida*: </label>
-                    <input type="text" name="life" value={form.life} onChange={valueInputhandler}/>
-                    {errors.life &&<span>{errors.life}</span>}
+                    <label htmlFor="">  Vida(*): </label>
+                    <input type="range" min={1} max={100} name="life" value={form.life} onChange={valueInputhandler}/>
+                    <span>{form.life}</span>
+                    {/* {errors.life &&<span>{errors.life}</span>} */}
                 </div>
 
                 <div>
-                    <label htmlFor="">  Ataque*: </label>
-                    <input type="text" name="attack" value={form.attack} onChange={valueInputhandler}/>
-                    {errors.attack &&<span>{errors.attack}</span>}
+                    <label htmlFor="">  Ataque(*): </label>
+                    <input type="range" min={1} max={100} name="attack" value={form.attack} onChange={valueInputhandler}/>
+                    <span>{form.attack}</span>
+                    {/* {errors.attack &&<span>{errors.attack}</span>} */}
                 </div>
 
                 <div>
-                    <label htmlFor="">  Defensa*: </label>
-                    <input type="text" name="defense" value={form.defense} onChange={valueInputhandler}/>
-                    {errors.defense &&<span>{errors.defense}</span>}
+                    <label htmlFor="">  Defensa(*): </label>
+                    <input type="range" min={1} max={100} name="defense" value={form.defense} onChange={valueInputhandler}/>
+                    <span>{form.defense}</span>
+                    {/* {errors.defense &&<span>{errors.defense}</span>} */}
                 </div>
 
                 <div>
@@ -123,6 +131,7 @@ const Form = () => {
 
                 <button type="submit">Create Pokemón</button>
             </form>
+            <h6> (*) Se deben rellenar obligatoriamente</h6>
         </div>
     )
 }
