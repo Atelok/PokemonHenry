@@ -15,7 +15,7 @@ align-items: center;
 
 /* AQUI VA EL DIV DE NAME: NAME*/
 .nameCard{
-    display: inline-block;
+    display: inline;
 }
 /**/
 
