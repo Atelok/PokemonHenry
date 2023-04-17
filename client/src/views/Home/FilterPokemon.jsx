@@ -34,7 +34,7 @@ const FilterPokemons = () => {
         </select>
       </div>
 
-      <hr />
+      {/* <hr /> */}
       <div>
         <label htmlFor="">Filter creados: </label>
         <select name="order" onChange={ourPokemonsHandler}>

@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON, FILTER_ATAQUE, OURS_YOURS_POKEMONS, SEARCH_BY_NAME } from "./TypeActions"
+import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON, FILTER_ATAQUE, OURS_YOURS_POKEMONS, SEARCH_BY_NAME, GET_POKEMON_ID2 } from "./TypeActions"
 import axios from "axios"
 
 
@@ -80,6 +80,18 @@ const searchName = (name)=>{
 }
 
 
+//OBETENER EL POKEMON PARA DETAIL
+
+const getPokemonId2 = (id)=>{
+
+    return async function (dispatch) {
+        const json= await axios.get(`http://localhost:3001/pokemons/${id}`);
+        const pokemon = json.data
+        return dispatch({type:GET_POKEMON_ID2, payload: pokemon});
+    }
+};
+
+
 
 
 
@@ -94,5 +106,6 @@ export {
     getTypes,
     filterAtaque,
     ourPokemons,
-    searchName
+    searchName,
+    getPokemonId2
 }

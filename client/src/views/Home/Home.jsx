@@ -4,6 +4,7 @@ import {
   getAllPokemons,
   setCurrentPage,
   getTypes,
+  orderPokemons
 } from "../../Redux/Actions/action.js";
 import PokemonList from "./PokemonList.jsx";
 import style from "./Home.module.css";
@@ -25,9 +26,10 @@ const Home = () => {
     }
   }, [dispatch]);
 
-  // useEffect(() => {
-  //     dispatch(getTypes());
-  // }, []);
+    const filterHandler = (event) => {
+        const AscDesc = event.target.name
+        dispatch(orderPokemons(AscDesc))
+    }
 
   const handlePageChange = (newPage) => {
     dispatch(setCurrentPage(newPage));
@@ -36,6 +38,12 @@ const Home = () => {
   return (
     <div className={style.PokemonList}>
       <div className={style.IzquierdaFilterOrder}>
+        <div >
+          <button name="refreshAll" onClick={filterHandler}>
+            REFRESH
+          </button>
+        </div>
+
         <FilterPokemons />
         <OrderPokemon />
       </div>

@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON, FILTER_ATAQUE, OURS_YOURS_POKEMONS, SEARCH_BY_NAME } from "../Actions/TypeActions"
+import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON, FILTER_ATAQUE, OURS_YOURS_POKEMONS, SEARCH_BY_NAME, GET_POKEMON_ID2 } from "../Actions/TypeActions"
 
 
 
@@ -9,7 +9,8 @@ const initialState = {
     currentPage: 0,
     pokemonsPerPage:12,
     seeMewImage: false,
-    typesPokemon: []
+    typesPokemon: [],
+    pokemonId: {}
 }
 
 
@@ -73,6 +74,10 @@ const rootReducer = (state = initialState, action) => {
         //BUSQUEDA POR NOMBRE
         case SEARCH_BY_NAME:
             return {...state, allPokemon: [action.payload]}
+
+
+        case GET_POKEMON_ID2:
+            return { ...state, pokemonId: {...action.payload}};
 
             
         default:

@@ -17,14 +17,15 @@ const OrderPokemon = () => {
 
     return (
         <div className={style.orderPokemon}>
-            <div><button name="refreshAll" onClick={filterHandler}>REFRESH</button></div>
 
-            <div>
+            <div className={style.ordenar_Asc_Desc}>
+                Ordenar por: 
                 <button name="Ascendente" onClick={filterHandler}>A-Z</button>
                 <button name="Descendente" onClick={filterHandler}>Z-A</button>
             </div>
 
             <div>
+                Ordenar por Ataque:
                 <button name="menorAtaque" onClick={filterAtaqueHandler}>MENOR ATAQUE</button>
                 <button name="mayorAtaque" onClick={filterAtaqueHandler}>MAYOR ATAQUE</button>
             </div>

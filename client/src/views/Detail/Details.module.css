@@ -1,0 +1,11 @@
+
+
+.Detail_div{
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 92vh;
+    max-height: 100%;
+    /* background-attachment: fixed; */
+}

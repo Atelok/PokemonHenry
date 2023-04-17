@@ -1,8 +1,11 @@
 import style from "./Card.module.css"
+import {NavLink} from "react-router-dom"
 
 const Card = ({ id, name, image, Types }) => {
     return (
+
         <div className={style.div_general_card}>
+            <NavLink to={`/detail/${id}`}>
 
             {/* IMAGEN DE LA CARD */}
             <div className={style.div_img_pokemon}>
@@ -34,7 +37,7 @@ const Card = ({ id, name, image, Types }) => {
                 }
             </div>
 
-
+        </NavLink>
         </div>
     )
 }
