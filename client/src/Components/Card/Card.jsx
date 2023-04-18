@@ -7,6 +7,8 @@ const Card = ({ id, name, image, Types }) => {
       <div className={style.div_general_card}>
         <NavLink to={`/detail/${id}`}>
           <div className={style.rango_Detail}>
+
+            <div >
             {/* IMAGEN DE LA CARD */}
             <div className={style.div_img_pokemon}>
               <img
@@ -15,9 +17,9 @@ const Card = ({ id, name, image, Types }) => {
                 alt={`Pokemons ${name}`}
               />
             </div>
-
             {/* #ID O #CREATED */}
             {isNaN(id) ? <div># Created </div> : <div> # {id} </div>}
+            </div>
 
             {/* NOMBRE DEL POKE */}
             <div>

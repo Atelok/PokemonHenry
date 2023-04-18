@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON, FILTER_ATAQUE, OURS_YOURS_POKEMONS, SEARCH_BY_NAME, GET_POKEMON_ID2 } from "./TypeActions"
+import { GET_ALL_POKEMONS, GET_POKEMON_ID, SET_PAGE, SEE_IMAGE, ORDER_POKEMONS, FILTER_POKEMONS, TYPES_POKEMON, FILTER_ATAQUE, OURS_YOURS_POKEMONS, SEARCH_BY_NAME, GET_POKEMON_ID2, NOMBRE_POKEMASTER } from "./TypeActions"
 import axios from "axios"
 
 
@@ -92,6 +92,12 @@ const getPokemonId2 = (id)=>{
 };
 
 
+const obtenerPokeNombre = (name)=>{
+
+    return { type: NOMBRE_POKEMASTER, payload: name}
+}
+
+
 
 
 
@@ -107,5 +113,6 @@ export {
     filterAtaque,
     ourPokemons,
     searchName,
-    getPokemonId2
+    getPokemonId2,
+    obtenerPokeNombre
 }

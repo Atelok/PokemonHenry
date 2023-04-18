@@ -6,7 +6,7 @@ import Article from "./ArticlePok/ArticlePok"
 import gotta from "./img/Logo y frase -Pokemon.png"
 import mewPoke from "./img/mew-Poke.png"
 import soundFile from "./sound/sonidoPika.mp3"
-import { seeImage } from "../../Redux/Actions/action"
+import { seeImage, obtenerPokeNombre } from "../../Redux/Actions/action"
 import style from "./Landing.module.css"
 
 
@@ -41,11 +41,23 @@ const Landing = () => {
 
 
 
+    //OBTENER NOMBRE DE POKEMASTER
+
+    const verifyName = (event) =>{
+        const name = event.target.value
+        dispatch(obtenerPokeNombre(name))     
+    }
+
 
     return (
         <header className={style.header_landing}>
 
             <div className={style.div_superior}>
+                <div>
+                    Ingresa tu nombre:
+                    <br />
+                    <input type="text" onChange={verifyName} />
+                </div>
 
                 <div className={style.gotta_div1}>
                     <img src={gotta} alt="Pokemon" />

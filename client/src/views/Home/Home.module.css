@@ -1,9 +1,9 @@
-html{
+html {
     background: linear-gradient(to bottom right, #ed1c24, #fdef08, #3776bc, #55aaff, #55aaff, #3776bc, #fdef08, #ed1c24);
     background-attachment: fixed;
 }
 
-.PokemonList{
+.PokemonList {
     /* background-color: aqua; */
     display: flex;
     flex-direction: row;
@@ -12,37 +12,39 @@ html{
 
 
 /*AQUI VA LOS DOS FILTER Y ORDER, QUE ESTAN A LA IZQUIERDA*/
-.IzquierdaFilterOrder{
+.IzquierdaFilterOrder {
     display: flex;
     /* justify-content: end; */
     flex-direction: column;
     margin: auto;
 }
+
 /**/
 
 
 
 /* ORDENAR ASCEDENTE Y DESCENDENTE*/
-.ordenar_Asc_Desc{
+.ordenar_Asc_Desc {
     display: flex;
     flex-direction: column;
 }
+
 /**/
 
 
 
 
 /* MODULO DE FILTERPOKEMONS*/
-.Filtrados{
+.Filtrados {
 
-display: flex;
-/* background-color: aquamarine; */
-flex-direction: column;
+    display: flex;
+    /* background-color: aquamarine; */
+    flex-direction: column;
 
-height: auto;
-width: 250px;
+    height: auto;
+    width: 250px;
 
-padding-left: 50px;
+    padding-left: 50px;
 }
 
 /**/
@@ -51,7 +53,7 @@ padding-left: 50px;
 
 
 
-.div_hola{
+.div_hola {
     /* border: 1px solid rgb(13, 31, 194); */
     /* background-color: rgb(13, 31, 194); */
     padding-top: 50px;
@@ -62,34 +64,49 @@ padding-left: 50px;
     align-items: center;
 }
 
-.hola_de_nuevo{
+.hola_de_nuevo {
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 40px;
 
 }
 
-.div_botones{
+.div_botones {
     /*!!*/
     /* background-color: red; */
     /**/
     display: flex;
-    
+
 
 }
 
 
 
 /* AQUI VAN EL DIV DE LOS BOTONES DE ORDENAR */
-.orderPokemon{
+.orderPokemon {
     /* background-color: black; */
     display: flex;
     flex-direction: row;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: center;
 
 
-    
-    
+
+
 }
+
 /*-------------------------------------------*/
+
+
+/* NUMBERLIST */
+/*PAGINADO DEL UL  EN numberList*/
+.paginado_Ul {
+    display: flex;
+    list-style: none
+}
+
+/* AQUI VA EL LI*/
+.paginado_Li{
+border: 1px solid black;
+
+}

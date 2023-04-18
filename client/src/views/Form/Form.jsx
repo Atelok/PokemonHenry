@@ -37,7 +37,7 @@ const Form = () => {
         validate({...form, [property]: value })
         setForm({...form, [property]: value })
         
-        //validate es la funcion creada abajo para verificar los inputs
+        //validate es la funcion creada abajo para verificar los inputs 
     }
 
 
@@ -51,17 +51,9 @@ const Form = () => {
 
         else !form.name && setErrors({...errors, name: "Debe introducir un nombre" });
         
-        if (form.image) /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(form.image) ? setErrors({...errors, image: "" }):setErrors({...errors, image: "Colocar un Imagen correcta" });
-        else !form.image && setErrors({...errors, image: "Debe colocar una imagen" });
-        
-        // if (form.life) /^(?:[1-9][0-9]?|100)$/.test(form.life) ? setErrors({...errors, life: "" }):setErrors({...errors, life: "Solo se acepta números del 1 al 100" });
-        // else !form.life && setErrors({...errors, life: "Colocar vida" });
+        // if (form.image) /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(form.image) ? setErrors({...errors, image: "" }):setErrors({...errors, image: "Colocar un Imagen correcta" });
+        // else !form.image && setErrors({...errors, image: "Debe colocar una imagen" });
 
-        // if (form.attack) /^(?:[1-9][0-9]?|100)$/.test(form.attack) ? setErrors({...errors, attack: "" }):setErrors({...errors, attack: "Solo se acepta números del 1 al 100" });
-        // else !form.attack && setErrors({...errors, attack: "Colocar ataque" });
-
-        // if (form.defense) /^(?:[1-9][0-9]?|100)$/.test(form.defense) ? setErrors({...errors, defense: "" }):setErrors({...errors, defense: "Solo se acepta números del 1 al 100" });
-        // else !form.defense && setErrors({...errors, defense: "Colocar defensa" });
     
     }
 
