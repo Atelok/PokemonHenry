@@ -27,11 +27,10 @@ const Detail = () => {
     Types,
   } = pokemonIds;
 
-  console.log(Types);
   return (
-    <div className={style}>
+    <div>
       {name ? (
-        <div>
+        <div className={style.Detail_div}>
           <div>
             <img src={image} alt={name} />
           </div>

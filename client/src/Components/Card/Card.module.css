@@ -1,25 +1,38 @@
-
-.div_general_card{
-display: flex;
-flex-direction: column;
-border: 1px solid red;
-/* background-color: red; */
-width: 200px;
-height: 310px;
-margin-right: 20px;
-margin-left: 20px;
-justify-content: center;
-align-items: center;
+.div_general_card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    /* background-color: red; */
+    width: 200px;
+    height: 310px;
+    margin-right: 20px;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
 }
+
+
+/*RANGO DE DONDE CLICKEAR LOS DETAILS*/
+.rango_Detail {
+    width: 200px;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*-------------------------*/ 
+
 
 
 /* AQUI VA EL DIV DE NAME: NAME*/
-.nameCard{
+.nameCard {
     display: inline;
 }
+
 /**/
 
-.div_img_pokemon{
+.div_img_pokemon {
     display: flex;
     width: 100px;
     height: 100px;
@@ -31,19 +44,20 @@ align-items: center;
     -o-border-radius: 50%;
     justify-content: center;
     box-shadow: 0 0 8px 4px #eed709af;
-    
+
 }
-.img_pokemon{
+
+.img_pokemon {
     width: 80px;
     height: 90px;
 }
 
-.div_types{
+.div_types {
     display: flex;
 
 }
 
-.div_types div{
+.div_types div {
     padding-right: 7px;
     padding-left: 7px;
 }

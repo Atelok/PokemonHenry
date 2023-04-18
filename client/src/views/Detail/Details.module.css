@@ -3,9 +3,10 @@
 .Detail_div{
     background-color: blueviolet;
     display: flex;
+    align-items: center;
     justify-content: center;
     width: auto;
-    height: 92vh;
+    height: 80vh;
     max-height: 100%;
-    /* background-attachment: fixed; */
 }
+
