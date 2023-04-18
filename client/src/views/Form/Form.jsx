@@ -31,14 +31,13 @@ const Form = () => {
 
   const validate = (form) => {
     //validacion para name
-    if (form.name)
-      /^[a-zA-Z]+$/.test(form.name)
-        ? setErrors({ ...errors, name: "" })
-        : setErrors({ ...errors, name: "No esta correcto" });
+    if (form.name){
+      /^[a-zA-Z]+$/.test(form.name) ? setErrors({ ...errors, name: "" }) : setErrors({ ...errors, name: "No esta correcto" });}
     else
       !form.name && setErrors({ ...errors, name: "Debe introducir un nombre" });
 
-    // if (form.image) /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(form.image) ? setErrors({...errors, image: "" }):setErrors({...errors, image: "Colocar un Imagen correcta" });
+    // if (form.image && form.name) {
+    //   /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(form.image) ? setErrors({...errors, image: "" }):setErrors({...errors, image: "Colocar un Imagen correcta" })}
     // else !form.image && setErrors({...errors, image: "Debe colocar una imagen" });
   };
 
@@ -155,6 +154,7 @@ const Form = () => {
             value={form.height}
             onChange={valueInputhandler}
           />
+          <span> Metros</span>
         </div>
 
         <div>
@@ -165,6 +165,7 @@ const Form = () => {
             value={form.weight}
             onChange={valueInputhandler}
           />
+          <span> Kg.</span>
         </div>
 
         <div>

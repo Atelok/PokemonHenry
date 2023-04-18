@@ -57,11 +57,11 @@ const Detail = () => {
               </div>
               <div>
                 <span>Height: </span>
-                <span>{height}</span>
+                <span>{height} mts.</span>
               </div>
               <div>
                 <span>Weight: </span>
-                <span>{weight}</span>
+                <span>{weight} kgs.</span>
               </div>
               <div>
                 <span>Types: </span>

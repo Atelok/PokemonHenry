@@ -38,8 +38,8 @@ const getPokemonByName = async (name2) => {
                             attack: data.stats[1].base_stat,
                             defense: data.stats[2].base_stat,
                             velocity: data.stats[5].base_stat,
-                            height: data.height,
-                            weight: data.weight,
+                            height: data.height/10,
+                            weight: data.weight/10,
                             Types: data.types.map((typ)=> typ.type.name),
                             create: false
                         };

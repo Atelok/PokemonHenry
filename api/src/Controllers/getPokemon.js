@@ -26,8 +26,8 @@ const getPokemonByiD = async (idPokemon, verify) => {
                         attack: stats[1].base_stat,
                         defense: stats[2].base_stat,
                         velocity: stats[5].base_stat,
-                        height,
-                        weight,
+                        height: height/10,
+                        weight: weight/10,
                         Types: typ,
                         create: false
                     }
