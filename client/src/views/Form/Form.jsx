@@ -5,10 +5,9 @@ import {useSelector} from "react-redux"
 
 
 const Form = () => {
-    
-    const [errors, setErrors] = useState({name: "", image: "", life: "", attack: "", defense: "", velocity:"", height:"", weight:"", Types:[]});
-    const [form, setForm] = useState({name: "", image: "", life: "", attack: "", defense: "", velocity:"", height:"", weight:"", Types:""});
-    const [type, setType] = useState([])
+  
+    const [errors, setErrors] = useState({name: "", image: "", life: "", attack: "", defense: "", velocity:"", height:"", weight:"", Types:""});
+    const [form, setForm] = useState({name: "", image: "", life: "", attack: "", defense: "", velocity:"", height:"", weight:"", Types:[]});
 
 
     function valueInputhandler(event) {
@@ -45,13 +44,13 @@ const Form = () => {
     /* FUNCION VERIFICADORA DE MI INPUT CHECKBOX */
     const introduceTypeHandle = (event)=>{
       const tipos = event.target.value
-      if (type.includes(tipos)) {
-        const aEliminar = type.findIndex((element)=> element === tipos)
-        type.splice(aEliminar, 1)
-        setType([...type])
+      if (form.Types.includes(tipos)) {
+        const aEliminar = form.Types.findIndex((element)=> element === tipos)
+        form.Types.splice(aEliminar, 1)
+        setForm({...form, Types:[...form.Types]})
         return
       }
-      setType([...type, tipos])
+      setForm({...form, Types:[...form.Types, tipos]})
     }
 //-----------------------------------------------
 
@@ -118,7 +117,7 @@ const Form = () => {
                     return (
                       <label htmlFor="">
                         {tipo}:
-                        {type.length >= 2 &&  (tipo !== type[0] && tipo !== type[1] )? (<input type="checkbox" value={tipo} onClick={introduceTypeHandle} disabled/>):(<input type="checkbox" value={tipo} onClick={introduceTypeHandle} />) }
+                        {form.Types.length >= 2 &&  (tipo !== form.Types[0] && tipo !== form.Types[1] )? (<input type="checkbox" value={tipo} onClick={introduceTypeHandle} disabled/>):(<input type="checkbox" value={tipo} onClick={introduceTypeHandle} />) }
                       
                       </label>
                     )

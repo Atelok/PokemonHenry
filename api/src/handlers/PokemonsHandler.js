@@ -56,10 +56,10 @@ const getPokemonhandler = async (req, res) => {
 
 // -------------------------4-------------------------//
 const createPokemonHandler = async (req, res) => {
-    const { id, name, image, life, attack, defense, velocity, height, weight, types } = req.body;
+    const { id, name, image, life, attack, defense, velocity, height, weight, Types } = req.body;
     
     try {
-        const newPoke = await createPokemon(id, name, image, life, attack, defense, velocity, height, weight, types)
+        const newPoke = await createPokemon(id, name, image, life, attack, defense, velocity, height, weight, Types)
 
         
         res.status(201).json({ message: `Pokemon creado correctamente ${newPoke.name}` })
