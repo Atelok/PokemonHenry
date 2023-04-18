@@ -1,60 +1,32 @@
 import style from "./Form.module.css"
 import { useState } from "react"
 import axios from "axios"
+import {useSelector} from "react-redux"
 
 
 const Form = () => {
     
-    const [errors, setErrors] = useState({
-        name: "",
-        image: "",
-        life: "",
-        attack: "",
-        defense: "",
-        velocity:"",
-        height:"",
-        weight:"",
-    });
-    const [form, setForm] = useState({
-        name: "",
-        image: "",
-        life: "",
-        attack: "",
-        defense: "",
-        velocity:"",
-        height:"",
-        weight:"",
-    });
-
-
+    const [errors, setErrors] = useState({name: "", image: "", life: "", attack: "", defense: "", velocity:"", height:"", weight:"", Types:[]});
+    const [form, setForm] = useState({name: "", image: "", life: "", attack: "", defense: "", velocity:"", height:"", weight:"", Types:""});
+    const [type, setType] = useState([])
 
 
     function valueInputhandler(event) {
-
         const property = event.target.name
         const value = event.target.value
 
         validate({...form, [property]: value })
         setForm({...form, [property]: value })
-        
         //validate es la funcion creada abajo para verificar los inputs 
-    }
-
+      }
 
     const validate = (form)=>{
-
         //validacion para name
-        if (form.name) /^[a-zA-Z]+$/.test(form.name) ? 
-        setErrors({...errors, name: "" })
-        :
-        setErrors({...errors, name: "No esta correcto" });
-
+        if (form.name) /^[a-zA-Z]+$/.test(form.name) ? setErrors({...errors, name: "" }):setErrors({...errors, name: "No esta correcto" });
         else !form.name && setErrors({...errors, name: "Debe introducir un nombre" });
-        
+
         // if (form.image) /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(form.image) ? setErrors({...errors, image: "" }):setErrors({...errors, image: "Colocar un Imagen correcta" });
         // else !form.image && setErrors({...errors, image: "Debe colocar una imagen" });
-
-    
     }
 
 
@@ -66,12 +38,31 @@ const Form = () => {
         .catch((err)=> alert(err))
     }
 
+
+    const typesPokemon = useSelector((state)=>state.typesPokemon)
+
+
+    /* FUNCION VERIFICADORA DE MI INPUT CHECKBOX */
+    const introduceTypeHandle = (event)=>{
+      const tipos = event.target.value
+      if (type.includes(tipos)) {
+        const aEliminar = type.findIndex((element)=> element === tipos)
+        type.splice(aEliminar, 1)
+        setType([...type])
+        return
+      }
+      setType([...type, tipos])
+    }
+//-----------------------------------------------
+
+    
+    
+
     return (
         <div className={style.div_generalDelForm}>
 
             <div>Crearemos nuestro Pokemón</div>
             
-
             <form className={style.loquecontieneel_Form} onSubmit={submitHandler}> 
                 <div>
                     <label htmlFor="">  Ingresa un nombre(*): </label>
@@ -119,6 +110,19 @@ const Form = () => {
                 <div>
                     <label htmlFor="">  Peso: </label>
                     <input type="text" name="weight" value={form.weight} onChange={valueInputhandler}/>
+                </div>
+
+                <div>
+                  <label htmlFor="">Tipos: </label>
+                  {typesPokemon.map((tipo)=>{
+                    return (
+                      <label htmlFor="">
+                        {tipo}:
+                        {type.length >= 2 &&  (tipo !== type[0] && tipo !== type[1] )? (<input type="checkbox" value={tipo} onClick={introduceTypeHandle} disabled/>):(<input type="checkbox" value={tipo} onClick={introduceTypeHandle} />) }
+                      
+                      </label>
+                    )
+                  })}
                 </div>
 
                 <button type="submit">Create Pokemón</button>
