@@ -10,3 +10,29 @@
     max-height: 100%;
 }
 
+
+
+.Div_caracteristicas{
+    display: flex;
+    flex-direction: row;
+    padding: 0px 20px;
+    border: 1px solid black;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    background-color: #30a7d7;
+}
+
+.name_caracteristicas{
+display: flex;
+color: aliceblue;
+font-weight: bolder;
+}
+
+.part_caracteristicas{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}

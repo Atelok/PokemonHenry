@@ -35,35 +35,44 @@ const Detail = () => {
             <img src={image} alt={name} />
           </div>
           <div>
-            <div>
               <h3>{name}</h3>
             </div>
-            <div>
-              <div>
+          <div className={style.name_caracteristicas}> 
+
+            <div className={style.Div_caracteristicas}>
+
+            <div className={style.part_caracteristicas}>
+              <div className={style.div_caract}>
                 <span>Life: </span>
                 <span>{life}</span>
               </div>
-              <div>
+              <div className={style.div_caract}>
                 <span>Ataque: </span>
                 <span>{attack}</span>
               </div>
-              <div>
+              <div className={style.div_caract}>
                 <span>Defense: </span>
                 <span>{defense}</span>
-              </div>
-              <div>
+              </div >
+            </div>
+
+            <div className={style.part_caracteristicas}>
+              <div className={style.div_caract}>
                 <span>Velocity: </span>
                 <span>{velocity}</span>
               </div>
-              <div>
+              <div className={style.div_caract}>
                 <span>Height: </span>
                 <span>{height} mts.</span>
               </div>
-              <div>
+              <div className={style.div_caract}>
                 <span>Weight: </span>
                 <span>{weight} kgs.</span>
               </div>
-              <div>
+            </div>
+
+            <div className={style.part_caracteristicas}>
+              <div className={style.div_caract}>
                 <span>Types: </span>
                 <div>
                   {Types[0]}
@@ -72,6 +81,7 @@ const Detail = () => {
                   {Types[1]}
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>

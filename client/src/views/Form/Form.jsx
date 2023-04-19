@@ -54,7 +54,7 @@ const Form = () => {
 
   /* FUNCION VERIFICADORA DE MI INPUT CHECKBOX */
   const introduceTypeHandle = (event) => {
-    const tipos = event.target.value;
+    const tipos = event.target.id;
     if (form.Types.includes(tipos)) {
       const aEliminar = form.Types.findIndex((element) => element === tipos);
       form.Types.splice(aEliminar, 1);

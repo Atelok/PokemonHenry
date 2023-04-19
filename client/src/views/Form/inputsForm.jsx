@@ -8,8 +8,18 @@ const InputsForm = ({
   typesPokemon,
   introduceTypeHandle,
 }) => {
+
+  // const diego = typesPokemon.forEach(element => {
+  //   for (let i = 1; i < typesPokemon.length; i++) {
+
+
+  //   }
+
+  // });
+
+
   return (
-  <div>
+  <div className={style.cuadro_Form}>
     <form className={style.loquecontieneel_Form} onSubmit={submitHandler}>
       <div>
         <label htmlFor=""> Ingresa un nombre(*): </label>
@@ -95,6 +105,7 @@ const InputsForm = ({
           name="height"
           value={form.height}
           onChange={valueInputhandler}
+          className={style.input_Height}
         />
         <span> Metros</span>
       </div>
@@ -106,32 +117,40 @@ const InputsForm = ({
           name="weight"
           value={form.weight}
           onChange={valueInputhandler}
+          className={style.input_Weight}
         />
         <span> Kg.</span>
       </div>
 
-      <div>
+      <div className={style.div_contenedor_label}>
+        <div>
         <label htmlFor="">Tipos: </label>
-        {typesPokemon.map((tipo) => {
+
+        </div>
+        {typesPokemon.map((tipo , index) => {
+          
           return (
-            <label htmlFor="">
+            <label className={style.label_Form} key={index} htmlFor="">
               {tipo}:
               {form.Types.length >= 2 &&
-              tipo !== form.Types[0] &&
-              tipo !== form.Types[1] ? (
+              index +1 !== form.Types[0] &&
+              index +1 !== form.Types[1] ? (
                 <input
                   type="checkbox"
                   value={tipo}
                   onClick={introduceTypeHandle}
+                  id={index+1}
                   disabled
                 />
               ) : (
                 <input
                   type="checkbox"
                   value={tipo}
+                  id={index+1}
                   onClick={introduceTypeHandle}
                 />
               )}
+            
             </label>
           );
         })}

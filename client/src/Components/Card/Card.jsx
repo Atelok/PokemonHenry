@@ -5,7 +5,7 @@ const Card = ({ id, name, image, Types }) => {
   return (
     <>
       <div className={style.div_general_card}>
-        <NavLink to={`/detail/${id}`}>
+        <NavLink className={style.NavLink_Card} to={`/detail/${id}`}>
           <div className={style.rango_Detail}>
 
             <div >

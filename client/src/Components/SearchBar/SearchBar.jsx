@@ -28,7 +28,7 @@ const SearchBar = () => {
   return (
     <div className={style.SearchBar_Div}>
       <div className={style.SearchBar_Div2}>
-        <button onClick={getRandomPokemon}>Random</button>
+        <button className={style.boton_Search} onClick={getRandomPokemon}>Random</button>
 
         <div className={style["wave-group"]}>
           <input
@@ -64,7 +64,7 @@ const SearchBar = () => {
           </label>
         </div>
 
-        <button onClick={getPokemonHandler}>Search</button>
+        <button onClick={getPokemonHandler} className={style.boton_Search}>Search</button>
       </div>
     </div>
   );

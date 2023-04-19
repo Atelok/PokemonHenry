@@ -11,6 +11,11 @@
     align-items: center;
 }
 
+.NavLink_Card{
+    text-decoration: none;
+}
+
+
 
 /*RANGO DE DONDE CLICKEAR LOS DETAILS*/
 .rango_Detail {

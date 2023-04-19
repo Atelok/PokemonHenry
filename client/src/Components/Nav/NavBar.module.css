@@ -1,7 +1,7 @@
 
 .div_NavBar{
     background-color: blue;
-    border: 1px solid rgb(185, 42, 42);
+    /* border: 1px solid rgb(185, 42, 42); */
     border-radius: 30px;
     display: flex;
     flex-direction: row;
@@ -11,6 +11,7 @@
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+    padding: 10px 0px;
 }
 
 .Nav_Bar{
