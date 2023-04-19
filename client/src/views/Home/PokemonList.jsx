@@ -2,9 +2,11 @@ import Cards from "../../Components/Cards/Cards.jsx";
 import style from "./Home.module.css";
 import { useSelector } from "react-redux";
 import NumberList from "./numberList.jsx";
+import OrderPokemon from "./OrderPokemon.jsx";
+import FilterPokemons from "./FilterPokemon.jsx";
 
 
-const PokemonList = ({ allPokemon, onPageChange }) => {
+const PokemonList = ({ allPokemon, onPageChange, filterHandler }) => {
   const currentPage = useSelector((state) => state.currentPage);
   const pokemonsPerPage = useSelector((state) => state.pokemonsPerPage);
   // const allPokemon = useSelector ((state)=> state.allPokemon)
@@ -35,22 +37,56 @@ const PokemonList = ({ allPokemon, onPageChange }) => {
 
 
 
-  const namePokemaster = useSelector((state)=>state.namePokemaster)
+  
 
   return (
-    <div className={style.div_hola}>
+    <div className={style.div_PokemonList}>
       <div className={style.div_botones}>
-        <button onClick={handlePrevPage} disabled={currentPage === 0}>
+        <button className={currentPage === 0? style.boton_prev2 : style.boton_prev}  onClick={handlePrevPage} disabled={currentPage === 0}>
           PREVIOUS
         </button>
         <NumberList pageQuantity={pageQuantity} onPageChange={onPageChange} />
-        <button onClick={handleNextPage} disabled={end > allPokemon.length - 1}>
+        <button className={currentPage === pageQuantity-1? style.boton_next2 : style.boton_next} onClick={handleNextPage} disabled={end > allPokemon.length - 1}>
           NEXT
         </button>
       </div>
 
-      <div className={style.hola_de_nuevo}>Hola de nuevo {namePokemaster}</div>
-      <Cards pokemonsToShow={pokemonsToShow} />
+
+      <div className={style.Pokemonlist_hola_refresh}>
+        <div className={style.Filterpoke_OrderPoke}>
+
+          <div>
+            <FilterPokemons />
+          </div>
+
+        
+          <div>
+            <OrderPokemon />
+          </div>
+        </div>
+
+
+        <div className={style.div_boton_refresh}>
+          <button name="refreshAll" onClick={filterHandler}>
+            REFRESH
+          </button>
+        </div>
+
+      </div>
+
+
+
+      <div className={style.cards_imagen}>
+        <div>
+          aqui va a ir una imagen
+        </div>
+
+        <div>
+          <Cards pokemonsToShow={pokemonsToShow} />
+        </div>
+
+      </div>
+
     </div>
   );
 };

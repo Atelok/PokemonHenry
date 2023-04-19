@@ -19,7 +19,7 @@ const OrderPokemon = () => {
         <div className={style.orderPokemon}>
 
             <div className={style.ordenar_Asc_Desc}>
-                Ordenar por: 
+                Ordenar por Nombre: 
                 <button name="Ascendente" onClick={filterHandler}>A-Z</button>
                 <button name="Descendente" onClick={filterHandler}>Z-A</button>
             </div>

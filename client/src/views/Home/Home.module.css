@@ -4,30 +4,47 @@ html {
 }
 
 .PokemonList {
-    /* background-color: aqua; */
     display: flex;
-    flex-direction: row;
-    height: 100%;
+    flex-direction: column;
 }
 
 
 /*AQUI VA LOS DOS FILTER Y ORDER, QUE ESTAN A LA IZQUIERDA*/
 .IzquierdaFilterOrder {
     display: flex;
-    /* justify-content: end; */
-    flex-direction: column;
-    margin: auto;
+    position: relative;
+    justify-content: center;
+    background-image: url("./img/background-elegant-black.png");
+    width: 100%;
+    height: 200px;
+
+}
+
+.hola_de_nuevo {
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.288);
+    color: white;
+    max-width: 800px;
+    padding-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
 /**/
 
 
+.Filterpoke_OrderPoke {
+    display: flex;
+    width: 1000px;
+    max-width: 1000px;
+    justify-content: space-evenly;
+    margin-left: 150px
+}
+
 
 /* ORDENAR ASCEDENTE Y DESCENDENTE*/
-.ordenar_Asc_Desc {
-    display: flex;
-    flex-direction: column;
-}
+.ordenar_Asc_Desc {}
 
 /**/
 
@@ -35,17 +52,7 @@ html {
 
 
 /* MODULO DE FILTERPOKEMONS*/
-.Filtrados {
-
-    display: flex;
-    /* background-color: aquamarine; */
-    flex-direction: column;
-
-    height: auto;
-    width: 250px;
-
-    padding-left: 50px;
-}
+.Filtrados {}
 
 /**/
 
@@ -53,60 +60,210 @@ html {
 
 
 
-.div_hola {
-    /* border: 1px solid rgb(13, 31, 194); */
-    /* background-color: rgb(13, 31, 194); */
-    padding-top: 50px;
+
+.div_hola {}
+
+
+/* HOLA - REFRESH DIV */
+.Pokemonlist_hola_refresh {
     display: flex;
-    width: 100vw;
-    height: 100%;
+    background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+
+.div_boton_refresh {
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.hola_de_nuevo {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 40px;
-
-}
-
 .div_botones {
-    /*!!*/
-    /* background-color: red; */
-    /**/
     display: flex;
-
-
+    justify-content: center;
+    background-color: #af2626;
 }
 
 
 
 /* AQUI VAN EL DIV DE LOS BOTONES DE ORDENAR */
-.orderPokemon {
-    /* background-color: black; */
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-
-
-
-
-}
+.orderPokemon {}
 
 /*-------------------------------------------*/
+
+
+
 
 
 /* NUMBERLIST */
 /*PAGINADO DEL UL  EN numberList*/
 .paginado_Ul {
+    list-style-type: none;
     display: flex;
-    list-style: none
+    padding: 0;
 }
 
 /* AQUI VA EL LI*/
-.paginado_Li{
-border: 1px solid black;
+.paginado_Li {
+    text-decoration: none;
 
 }
+
+/*div de hola y de paginado*/
+.div_PokemonList {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* PARTE DE ABAJO CARDS Y LA IMAGEN QUE SE PONDRA */
+
+.cards_imagen {
+    display: flex;
+
+}
+
+
+
+/*********************AQUI BOTONES DE PAGINADO********************************/
+
+/*BOTON IZQUIERDO*/
+.boton_prev {
+    max-width: 150px;
+    width: 150px;
+    
+    --green: #000000;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 70px 0 0 70px;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, #3f46431a 1%, transparent 40%, transparent 60%, #3f46431a 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px #3f46431a, 0 0 9px 3px rgba(27, 253, 156, 0.1);
+
+}
+
+
+.boton_prev:hover {
+    color: #000000;
+    box-shadow: inset 0 0 10px #3e464299, 0 0 9px 3px #34383633;
+}
+
+.boton_prev:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, #3e464299 40%, #34383633 60%, transparent 100%);
+}
+
+.boton_prev:hover:before {
+    transform: translateX(15em);
+}
+
+
+/*------*/
+.boton_prev2 {
+    max-width: 150px;
+    width: 150px;
+    --green: #646464;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 70px 0 0 70px;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    color: var(--green);
+}
+/*------*/
+
+
+
+
+
+/*BOTON DERECHO*/
+.boton_next {
+    max-width: 150px;
+    width: 150px;
+    --green: #000000;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0px 70px 70px 0px;
+    
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, #3f46431a 1%, transparent 40%, transparent 60%, #3f46431a 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px #3f46431a, 0 0 9px 3px rgba(27, 253, 156, 0.1);
+    -webkit-border-radius: 0px 70px 70px 0px;
+    -moz-border-radius: 0px 70px 70px 0px;
+    -ms-border-radius: 0px 70px 70px 0px;
+    -o-border-radius: 0px 70px 70px 0px;
+}
+
+
+.boton_next:hover {
+    color: #000000;
+    box-shadow: inset 0 0 10px #3e464299, 0 0 9px 3px #34383633;
+}
+
+.boton_next:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, #3e464299 40%, #34383633 60%, transparent 100%);
+}
+
+.boton_next:hover:before {
+    transform: translateX(15em);
+}
+
+/**/
+.boton_next2 {
+    max-width: 150px;
+    width: 150px;
+    --green: #646464;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0 70px 70px 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    color: var(--green);
+    -webkit-border-radius: 0 70px 70px 0;
+    -moz-border-radius: 0 70px 70px 0;
+    -ms-border-radius: 0 70px 70px 0;
+    -o-border-radius: 0 70px 70px 0;
+}
+/**/

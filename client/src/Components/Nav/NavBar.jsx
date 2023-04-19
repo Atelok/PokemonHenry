@@ -13,9 +13,9 @@ const NavBar = ()=>{
         <div className={style.div_NavBar}>
         
             <div className={style.HoFoAb}>
-            <NavLink to="/home" className={style.Nav_Bar}>Home</NavLink>
-            <NavLink className={style.Nav_Bar} to="/form">Crear tu propio Pokemon</NavLink>
-            <NavLink className={style.Nav_Bar} to="/about">About</NavLink>
+            <NavLink to="/home" className={style.Nav_Bar}>- Home</NavLink>
+            <NavLink className={style.Nav_Bar} to="/form">- Crear tu propio Pokemon</NavLink>
+            <NavLink className={style.Nav_Bar} to="/about">- About</NavLink>
             </div>
 
             <div>
@@ -23,7 +23,7 @@ const NavBar = ()=>{
             </div>
             
             <div>
-            <NavLink className={style.Nav_Bar} to="/">logout</NavLink>
+            <NavLink className={style.btn} to="/">logout</NavLink>
             </div>
 
         </div>

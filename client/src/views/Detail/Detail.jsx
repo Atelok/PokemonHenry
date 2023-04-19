@@ -10,7 +10,7 @@ const Detail = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getPokemonId2(id));  
+    dispatch(getPokemonId2(id));
   }, []);
 
   const pokemonIds = useSelector((state) => state.pokemonId);
@@ -28,60 +28,58 @@ const Detail = () => {
   } = pokemonIds;
 
   return (
-    <div>
+    <div className={style.div_general_detail}>
+      <div style={{color:"white", fontSize: "40px", display: "flex", alignItems:"end"}}>
+        <h3>{name}</h3>
+      </div>
       {name ? (
         <div className={style.Detail_div}>
           <div>
             <img src={image} alt={name} />
           </div>
-          <div>
-              <h3>{name}</h3>
-            </div>
-          <div className={style.name_caracteristicas}> 
 
+          <div className={style.name_caracteristicas}>
             <div className={style.Div_caracteristicas}>
-
-            <div className={style.part_caracteristicas}>
-              <div className={style.div_caract}>
-                <span>Life: </span>
-                <span>{life}</span>
-              </div>
-              <div className={style.div_caract}>
-                <span>Ataque: </span>
-                <span>{attack}</span>
-              </div>
-              <div className={style.div_caract}>
-                <span>Defense: </span>
-                <span>{defense}</span>
-              </div >
-            </div>
-
-            <div className={style.part_caracteristicas}>
-              <div className={style.div_caract}>
-                <span>Velocity: </span>
-                <span>{velocity}</span>
-              </div>
-              <div className={style.div_caract}>
-                <span>Height: </span>
-                <span>{height} mts.</span>
-              </div>
-              <div className={style.div_caract}>
-                <span>Weight: </span>
-                <span>{weight} kgs.</span>
-              </div>
-            </div>
-
-            <div className={style.part_caracteristicas}>
-              <div className={style.div_caract}>
-                <span>Types: </span>
-                <div>
-                  {Types[0]}
+              <div className={style.part_caracteristicas}>
+                <div className={style.div_caract}>
+                  <span className={style.div_caract_span}>Life: </span>
+                  <span>{life}</span>
                 </div>
-                <div>
-                  {Types[1]}
+                <div className={style.div_caract}>
+                  <span className={style.div_caract_span}>Ataque: </span>
+                  <span>{attack}</span>
+                </div>
+                <div className={style.div_caract}>
+                  <span className={style.div_caract_span}>Defense: </span>
+                  <span>{defense}</span>
                 </div>
               </div>
-            </div>
+
+              <div className={style.part_caracteristicas}>
+                <div className={style.div_caract}>
+                  <span className={style.div_caract_span}>Velocity: </span>
+                  <span>{velocity}</span>
+                </div>
+                <div className={style.div_caract}>
+                  <span className={style.div_caract_span}>Height: </span>
+                  <span>{height} mts.</span>
+                </div>
+                <div className={style.div_caract}>
+                  <span className={style.div_caract_span}>Weight: </span>
+                  <span>{weight} kgs.</span>
+                </div>
+              </div>
+
+              <div className={style.part_caracteristicas}>
+                <div className={style.div_caract}>
+                  <span className={style.div_caract_span}>Types: </span>
+                  <div>
+                    1{")"}
+                    {Types[0]}
+                  </div>
+                  <div>{Types[1]}</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

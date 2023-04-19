@@ -8,8 +8,8 @@ import {
 } from "../../Redux/Actions/action.js";
 import PokemonList from "./PokemonList.jsx";
 import style from "./Home.module.css";
-import OrderPokemon from "./OrderPokemon.jsx";
-import FilterPokemons from "./FilterPokemon.jsx";
+import fondoNegro from "./img/background-elegant-black.png"
+
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -35,19 +35,34 @@ const Home = () => {
     dispatch(setCurrentPage(newPage));
   };
 
+  const namePokemaster = useSelector((state)=>state.namePokemaster)
   return (
     <div className={style.PokemonList}>
-      <div className={style.IzquierdaFilterOrder}>
-        <div>
-          <button name="refreshAll" onClick={filterHandler}>
-            REFRESH
-          </button>
-        </div>
 
-        <FilterPokemons />
-        <OrderPokemon />
+
+      <div className={style.IzquierdaFilterOrder}>
+        <div className={style.imagen}></div>
+      <div className={style.hola_de_nuevo}>
+
+        <h2>
+          Hola {`"${namePokemaster.toUpperCase()}"`}, aqui explorarás el mundo de Pokémon.
+        </h2>
+          <p>No importa si eres nuevo en la serie o si eres un experimentado entrenador Pokémon, hay un montón de Pokémons increíbles por descubrir.</p>
+
       </div>
-      <PokemonList allPokemon={allPokemon} onPageChange={handlePageChange} />
+
+
+        
+
+      </div>
+
+
+
+      <div className={style.div_hola}>
+      <PokemonList allPokemon={allPokemon} onPageChange={handlePageChange} filterHandler={filterHandler} />
+      </div>
+
+
     </div>
   );
 };

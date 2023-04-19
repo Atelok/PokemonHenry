@@ -113,3 +113,32 @@ export default rootReducer
             //     }
             // }
             // return pokeType
+
+
+            /*
+            case ORDER_BY_WEIGHT:
+
+                const hola = state.dogs_page.map((uno)=>{
+
+                    return [...uno, weight: [...a.weight.imperial.split('-')] ]
+                })
+                const hola2 = hola.sort((a, b)=> a.weight.imperial[0] - b.weight.imperial[0]
+                const hola3 = hola.sort((a, b)=> b.weight.imperial[0] - a.weight.imperial[0]
+
+                )
+
+                if(action.payload === 'AscName'){
+
+                    return {
+                        ...state,
+                        dogs_page : [...hola2]
+                    }
+                } else {
+                    return {
+                        ...state,
+                        dogs_page : [...hola3)
+
+                    }
+                }
+            
+            */

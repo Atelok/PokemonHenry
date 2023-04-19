@@ -50,20 +50,20 @@ const SearchBar = () => {
               k
             </span>
             <span className={style["label-char"]} style={{ "--index": 3 }}>
-              e
+              é
             </span>
             <span className={style["label-char"]} style={{ "--index": 4 }}>
               m
             </span>
             <span className={style["label-char"]} style={{ "--index": 5 }}>
-              ó
+              o
             </span>
             <span className={style["label-char"]} style={{ "--index": 6 }}>
               n
             </span>
           </label>
         </div>
-
+        
         <button onClick={getPokemonHandler} className={style.boton_Search}>Search</button>
       </div>
     </div>
