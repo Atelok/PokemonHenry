@@ -9,13 +9,16 @@ const InputsForm = ({
   introduceTypeHandle,
 }) => {
 
-  // const diego = typesPokemon.forEach(element => {
-  //   for (let i = 1; i < typesPokemon.length; i++) {
 
+  const arrayType = []
 
-  //   }
+    for (let i = 1; i <= typesPokemon.length; i++) {
+        arrayType.push(`${i}`)
 
-  // });
+    }
+
+  // console.log(arrayType);
+  // console.log(form.Types);
 
 
   return (
@@ -132,9 +135,9 @@ const InputsForm = ({
           return (
             <label className={style.label_Form} key={index} htmlFor="">
               {tipo}:
-              {form.Types.length >= 2 &&
-              index +1 !== form.Types[0] &&
-              index +1 !== form.Types[1] ? (
+              {form.Types.length === 2 &&
+              arrayType.includes(form.Types[0]) &&
+              arrayType.includes(form.Types[1]) ? (
                 <input
                   type="checkbox"
                   value={tipo}

@@ -18,7 +18,7 @@ const FilterPokemons = () => {
 
   return (
     <div className={style.Filtrados}>
-      <div>
+      <div className={style.div_filtrados}>
         <label htmlFor="">Filter types: </label>
         <select name="order" onChange={filterPoke}>
           <option value="Filter" disabled="disabled">
@@ -35,7 +35,7 @@ const FilterPokemons = () => {
       </div>
 
       {/* <hr /> */}
-      <div>
+      <div className={style.div_filtrados}>
         <label htmlFor="">Filter creados: </label>
         <select name="order" onChange={ourPokemonsHandler}>
           <option value="Filter" disabled="disabled">

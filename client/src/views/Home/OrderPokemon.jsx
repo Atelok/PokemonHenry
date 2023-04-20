@@ -20,14 +20,18 @@ const OrderPokemon = () => {
 
             <div className={style.ordenar_Asc_Desc}>
                 Ordenar por Nombre: 
+                <div style={{paddingLeft: "20px"}}>
                 <button name="Ascendente" onClick={filterHandler}>A-Z</button>
                 <button name="Descendente" onClick={filterHandler}>Z-A</button>
+                </div>
             </div>
 
             <div>
                 Ordenar por Ataque:
+                <div style={{paddingTop : "10px"}}>
                 <button name="menorAtaque" onClick={filterAtaqueHandler}>MENOR ATAQUE</button>
                 <button name="mayorAtaque" onClick={filterAtaqueHandler}>MAYOR ATAQUE</button>
+                </div>
             </div>
 
 

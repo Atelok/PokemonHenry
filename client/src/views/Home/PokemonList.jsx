@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import NumberList from "./numberList.jsx";
 import OrderPokemon from "./OrderPokemon.jsx";
 import FilterPokemons from "./FilterPokemon.jsx";
+import { useEffect } from "react";
 
 
 const PokemonList = ({ allPokemon, onPageChange, filterHandler }) => {
@@ -34,6 +35,16 @@ const PokemonList = ({ allPokemon, onPageChange, filterHandler }) => {
 
   // }
 
+
+
+  // useEffect(() => {
+  //   first
+  
+  //   return () => {
+  //     second
+  //   }
+  // }, [third])
+  
 
 
 
@@ -77,7 +88,7 @@ const PokemonList = ({ allPokemon, onPageChange, filterHandler }) => {
 
 
       <div className={style.cards_imagen}>
-        <div>
+        <div style={{width : "500px", paddingLeft: "100px"}}>
           aqui va a ir una imagen
         </div>
 
