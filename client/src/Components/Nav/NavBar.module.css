@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Wardshus;
-    src: url(../../Fonts/WardshusCalligraphy_PERSONAL_USE_ONLY.otf);
+    font-family: Monserrat;
+    src: url(../../Fonts/MontserratAlternates-Bold.otf);
 }
 
 
@@ -13,16 +13,38 @@
     align-items: center;
     justify-content: space-around;
     border: 1px solid rgb(90, 86, 86);
-
-    padding: 10px 0px;
+    max-width: 100%;
+    width: 100%;
+    padding: 8px 0px;
+    position: fixed;
+    z-index: 1000;
 }
+.div_NavBar2 {
+    background-color: white;
+    /* border: 1px solid rgb(185, 42, 42); */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgb(90, 86, 86);
+    max-width: 100%;
+    width: 100%;
+    padding: 8px 0px;
+    z-index: 1000;
+}
+
+
+
+
+
 
 .Nav_Bar {
     color: rgb(0, 0, 0);
-    font-family: Wardshus;
+    font-family: Monserrat;
     text-decoration: none;
     font-size: 20px;
-    padding: 5px 0;
+    padding: 1px 0;
 
 }
 

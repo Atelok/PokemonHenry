@@ -85,9 +85,15 @@ const searchName = (name)=>{
 const getPokemonId2 = (id)=>{
 
     return async function (dispatch) {
-        const json= await axios.get(`http://localhost:3001/pokemons/${id}`);
-        const pokemon = json.data
-        return dispatch({type:GET_POKEMON_ID2, payload: pokemon});
+
+        if (id) {
+            const json= await axios.get(`http://localhost:3001/pokemons/${id}`);
+            const pokemon = json.data
+            return dispatch({type:GET_POKEMON_ID2, payload: pokemon});
+        }
+
+        return dispatch({type:GET_POKEMON_ID2, payload: {}})
+
     }
 };
 

@@ -43,7 +43,7 @@ const InputsForm = ({
           value={form.image}
           onChange={valueInputhandler}
         />
-        {errors.image && <span>{errors.image}</span>}
+        {/* {errors.image && <span>{errors.image}</span>} */}
       </div>
 
       <div>

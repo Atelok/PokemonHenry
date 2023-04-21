@@ -1,17 +1,32 @@
 .div_general_card {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
-    /* background-color: red; */
-    width: 200px;
+    /*border: 1px solid red;
+    *//*background-color: red;
+    */width: 200px;
     height: 310px;
     margin-right: 20px;
     margin-left: 20px;
     justify-content: center;
     align-items: center;
+    /*opcion1*/
+    /*border-radius: 23px;
+    background: #e8eb47;
+    box-shadow: inset -5px -5px 10px #aeb035,        inset 5px 5px 10px #ffff59;
+
+
+    *//*opcion2*/
+    border-radius: 27px;
+    background: #e1e273;
+    box-shadow: 5px 5px 2px #5a5a2e,        -5px -5px 2px #ffffb8;
+    outline: 2px solid #ccc;
+    /*contornoexterior*/
+    outline-offset: -5px;
+    /*distanciadelcontornointerior*/
+    padding: 10px;
 }
 
-.NavLink_Card{
+.NavLink_Card {
     text-decoration: none;
 }
 
@@ -26,7 +41,8 @@
     justify-content: center;
     align-items: center;
 }
-/*-------------------------*/ 
+
+/*-------------------------*/
 
 
 
@@ -49,8 +65,11 @@
     -o-border-radius: 50%;
     justify-content: center;
     box-shadow: 0 0 8px 4px #eed709af;
-
 }
+
+
+
+
 
 .img_pokemon {
     width: 80px;

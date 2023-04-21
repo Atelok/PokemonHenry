@@ -10,7 +10,7 @@ const NavBar = ()=>{
     const {pathname} = location
 
     return(
-        <div className={style.div_NavBar}>
+        <div className={pathname==="/home"? style.div_NavBar : style.div_NavBar2}>
         
             <div className={style.HoFoAb}>
             <NavLink to="/home" className={style.Nav_Bar}>- Home</NavLink>

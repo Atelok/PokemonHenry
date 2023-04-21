@@ -3,6 +3,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import InputsForm from "./inputsForm.jsx";
+import pikachu from "./img/Creacion-Poke-Defecto.png"
+
 
 const Form = () => {
   const [errors, setErrors] = useState({
@@ -11,7 +13,7 @@ const Form = () => {
   });
   const [form, setForm] = useState({
     name: "",
-    image: "",
+    image: `${pikachu}`,
     life: 50,
     attack: 50,
     defense: 50,
@@ -34,9 +36,14 @@ const Form = () => {
     //validacion para name
     if (form.name){
       /^[a-zA-Z]+$/.test(form.name) ? setErrors({ ...errors, name: "" }) : setErrors({ ...errors, name: "No esta correcto" });}
-    else
-      !form.name && setErrors({ ...errors, name: "Debe introducir un nombre" });
+    else{
 
+      !form.name && setErrors({ ...errors, name: "Debe introducir un nombre" });
+    }
+
+    //   if (typeof form.image === "string") {
+    //     setForm({...form, image: errors.image})
+    //   }
     // if (form.image && form.name) {
     //   /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(form.image) ? setErrors({...errors, image: "" }):setErrors({...errors, image: "Colocar un Imagen correcta" })}
     // else !form.image && setErrors({...errors, image: "Debe colocar una imagen" });
@@ -47,7 +54,7 @@ const Form = () => {
     axios
       .post("http://localhost:3001/pokemons/", form)
       .then((res) => alert("Pokemón Creado"))
-      .catch((err) => alert(err));
+      .catch((err) => alert({err: err.message}));
   };
 
   const typesPokemon = useSelector((state) => state.typesPokemon);

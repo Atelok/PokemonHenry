@@ -3,6 +3,8 @@ import { getPokemonId2 } from "../../Redux/Actions/action";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import style from "./Details.module.css";
+import { useNavigate } from "react-router-dom";
+
 
 const Detail = () => {
   const { id } = useParams();
@@ -11,6 +13,8 @@ const Detail = () => {
 
   useEffect(() => {
     dispatch(getPokemonId2(id));
+
+    return dispatch(getPokemonId2(""))
   }, []);
 
   const pokemonIds = useSelector((state) => state.pokemonId);
@@ -27,12 +31,26 @@ const Detail = () => {
     Types,
   } = pokemonIds;
 
+
+  const navigate = useNavigate()
+
+
+
+  const backToHomeHandler = ()=>{
+    navigate("../home")
+  }
+
+
+
+
   return (
     <div className={style.div_general_detail}>
-      <div style={{color:"white", fontSize: "40px", display: "flex", alignItems:"end"}}>
+      
+      {image ? (
+        <>
+        <div style={{color:"white", fontSize: "40px", display: "flex", alignItems:"end"}}>
         <h3>{name}</h3>
       </div>
-      {name ? (
         <div className={style.Detail_div}>
           <div>
             <img src={image} alt={name} />
@@ -74,18 +92,27 @@ const Detail = () => {
                 <div className={style.div_caract}>
                   <span className={style.div_caract_span}>Types: </span>
                   <div>
-                    1{")"}
+                    1{") "}
                     {Types[0]}
                   </div>
-                  <div>{Types[1]}</div>
+                  {Types[1] && (<div>
+                    2{") "}
+                    {Types[1]}</div>)}
+                  
                 </div>
               </div>
             </div>
           </div>
         </div>
+        </>
       ) : (
-        "loading"
+        <p>"loading"</p> 
       )}
+
+      <div>
+        <button onClick={backToHomeHandler}>{"<"} Regresar</button>
+      </div>
+
     </div>
   );
 };

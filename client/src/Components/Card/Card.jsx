@@ -2,6 +2,12 @@ import style from "./Card.module.css";
 import { NavLink } from "react-router-dom";
 
 const Card = ({ id, name, image, Types }) => {
+
+
+
+
+  
+
   return (
     <>
       <div className={style.div_general_card}>
@@ -14,11 +20,12 @@ const Card = ({ id, name, image, Types }) => {
               <img
                 className={style.img_pokemon}
                 src={image}
-                alt={`Pokemons ${name}`}
+                alt={`Pokemons ${name}`
+              }
               />
             </div>
             {/* #ID O #CREATED */}
-            {isNaN(id) ? <div># Created </div> : <div> # {id} </div>}
+            {isNaN(id) ? <div># Created </div> : <div style={{fontSize:"12px", fontFamily: "arial"}}> # {id} </div>}
             </div>
 
             {/* NOMBRE DEL POKE */}
