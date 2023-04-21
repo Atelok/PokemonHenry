@@ -320,3 +320,24 @@ height: 100px;
 }
 
 /**/
+
+
+select {
+    height: 30px;
+    background-color: #c97e7e49;
+    border: 1px solid cc272769;
+    color: #cc2727;
+    padding: 0 5px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  /* select:hover, select:focus {
+    outline: none;
+    border: 1px solid #666;
+  }
+   */
+  select option {
+    color: #cc2727be;
+    background-color: #c97e7e49;
+  }

@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import style from "./Details.module.css";
 import { useNavigate } from "react-router-dom";
-
+import Pokebola from "../../extras/loaderPokebola";
 
 const Detail = () => {
   const { id } = useParams();
@@ -106,7 +106,7 @@ const Detail = () => {
         </div>
         </>
       ) : (
-        <p>"loading"</p> 
+        <Pokebola/>
       )}
 
       <div>
