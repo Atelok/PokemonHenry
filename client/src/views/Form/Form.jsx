@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import InputsForm from "./inputsForm.jsx";
+import InputsForm2 from "./Form1";
 import pikachu from "./img/Creacion-Poke-Defecto.png"
 
 
@@ -77,6 +78,7 @@ const Form = () => {
     <div className={style.div_generalDelForm}>
       <div>Crearemos nuestro Pokemón</div>
       <InputsForm form={form} submitHandler={submitHandler} errors={errors} valueInputhandler= {valueInputhandler} typesPokemon={typesPokemon} introduceTypeHandle={introduceTypeHandle}/>
+      {/* <InputsForm2 form={form} submitHandler={submitHandler} errors={errors} valueInputhandler= {valueInputhandler} typesPokemon={typesPokemon} introduceTypeHandle={introduceTypeHandle}/> */}
       
       <h6> (*) Se deben rellenar obligatoriamente</h6>
     </div>
