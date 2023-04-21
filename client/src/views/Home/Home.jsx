@@ -8,22 +8,25 @@ import {
 } from "../../Redux/Actions/action.js";
 import PokemonList from "./PokemonList.jsx";
 import style from "./Home.module.css";
-import fondoNegro from "./img/background-elegant-black.png"
+import imagePoke from "./img/pokemon-maplerose.webp"
 
 
 const Home = () => {
   const dispatch = useDispatch();
 
-  //!ESTADO GLOBAL - PASAREMOS POR AQUI PORQUE QUIZAS LO USEMOS MAS ADELANTE
+  //ESTADO GLOBAL - PASAREMOS POR AQUI PORQUE QUIZAS LO USEMOS MAS ADELANTE
   const allPokemon = useSelector((state) => state.allPokemon);
 
   useEffect(() => {
     try {
       dispatch(getAllPokemons());
       dispatch(getTypes());
+      document.documentElement.style.backgroundImage = `url(${imagePoke})`;
+      // document.documentElement.style.backgroundSize = 'cover';
     } catch (error) {
       throw Error("Algo salio mal");
     }
+
   }, [dispatch]);
 
   const filterHandler = (event) => {

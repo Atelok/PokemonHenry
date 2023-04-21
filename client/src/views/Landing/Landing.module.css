@@ -1,7 +1,12 @@
+
+
+
+
 body {
     /* background-color: rgb(255, 255, 255); */
     max-width: 100vw;
-
+    width: 100vw;
+    /* background-image: url("../Home/img/pokemon-maplerose.webp"); */
     overflow-x: hidden;
 }
 

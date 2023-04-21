@@ -8,6 +8,7 @@ import mewPoke from "./img/mew-Poke.png";
 import soundFile from "./sound/sonidoPika.mp3";
 import { seeImage, obtenerPokeNombre } from "../../Redux/Actions/action";
 import style from "./Landing.module.css";
+import imagePoke from "../Home/img/pokemon-maplerose.webp"
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -20,6 +21,17 @@ const Landing = () => {
     });
     sound.play();
   };
+
+
+  //CAMBIO DE BACKGROUND
+
+
+  useEffect(() => {
+    document.documentElement.style.background = `linear-gradient(to bottom right, #ed1c24, #fdef08, #3776bc, #55aaff, #55aaff, #3776bc, #fdef08, #ed1c24)`;
+    document.documentElement.style.backgroundAttachment = 'fixed';
+  }, []);
+
+
 
   //APARECER A MEW
 

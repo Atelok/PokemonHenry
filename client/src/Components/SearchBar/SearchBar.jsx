@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { searchName, getPokemonId } from "../../Redux/Actions/action";
 import style from "./SearchBar.module.css";
+import { setCurrentPage } from "../../Redux/Actions/action";
 
 const SearchBar = () => {
   // const onePoke = useSelector((poke) => poke.allPokemon);
@@ -20,7 +21,10 @@ const SearchBar = () => {
   };
 
   //MI HANDLE PARA RANDOMEAR POKEMONS
+  
   const getRandomPokemon = () => {
+
+    dispatch(setCurrentPage(0))
     const random = Math.floor(Math.random() * 1010);
     dispatch(getPokemonId(random));
   };
