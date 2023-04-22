@@ -23,7 +23,7 @@ const getPokemonByName = async (name2) => {
                     Types: poke.Types.map(type => type.name)
                 };
             });
-            return formattedPokemon;
+            return formattedPokemon[0];
         }
         else {
 

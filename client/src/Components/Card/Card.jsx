@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import sparkles from "./img/sparkles.gif"
 import fondito from "./img/holo.png"
 import banner from "./img/banner-dorado.png"
+import Pokebola from "../../extras/loaderPokebola"
 
 
 const Card = ({ id, name, image, Types }) => {
@@ -14,7 +15,7 @@ const nameCorrectly = name.charAt(0).toUpperCase() + name.slice(1)
 
   return (
     <>
-      <div className={`${Types[0]} ${style.div_general_card}`}>
+      {image? (<div className={`${Types[0]} ${style.div_general_card}`}>
         <NavLink className={style.NavLink_Card} to={`/detail/${id}`}>
           <div className={style.rango_Detail}>
             <div >
@@ -61,7 +62,8 @@ const nameCorrectly = name.charAt(0).toUpperCase() + name.slice(1)
             </div>
           </div>
         </NavLink>
-      </div>
+      </div>) : <Pokebola/>}
+      
     </>
   );
 };

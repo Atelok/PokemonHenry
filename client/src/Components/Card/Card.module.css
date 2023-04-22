@@ -19,6 +19,9 @@
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
+    background-image: linear-gradient(125deg, #ff00843b 15%, #fca40028 30%, #ffff0023 40%, #00ff8821 60%, #00d0ff2a 70%, #cc4cfa31 85%);
+    filter: brightness(1.1) contrast(1.1);
+    -webkit-filter: brightness(1.1) contrast(1.1);
 }
 
 
@@ -28,6 +31,8 @@
     -moz-transform: scale(1.07);
     -ms-transform: scale(1.07);
     -o-transform: scale(1.07);
+    filter: brightness(1.15) contrast(1.15);
+    -webkit-filter: brightness(1.15) contrast(1.15);
 }
 
 
@@ -40,14 +45,14 @@
     display: flex;
     width: 100px;
     height: 100px;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.86);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     justify-content: center;
-    box-shadow: 0 0 13px 6px #ffffffcc;
+    box-shadow: 0 0 12px 5px #ffffffcc;
     z-index: 5;
     
 }
@@ -80,6 +85,8 @@
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
+    filter: brightness(1.2) contrast(1.5);
+    -webkit-filter: brightness(1.2) contrast(1.5);
 }
 
 .fondito{
@@ -96,6 +103,7 @@
     -o-border-radius: 25px;
 }
 .banner{
+    filter: brightness(1.1) contrast(1.1);
     z-index: -1;
     opacity: 1;
     position: absolute;
@@ -107,6 +115,7 @@
     -moz-border-radius: 25px 25px 0px 0px;
     -ms-border-radius: 25px 25px 0px 0px;
     -o-border-radius: 25px 25px 0px 0px;
+    -webkit-filter: brightness(1.1) contrast(1.1);
 }
 
 
@@ -171,4 +180,5 @@
     padding-left: 7px;
     border-radius: 10px;
 }
+
 

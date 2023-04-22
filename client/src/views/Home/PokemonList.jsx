@@ -53,13 +53,17 @@ const PokemonList = ({ allPokemon, onPageChange, filterHandler }) => {
   return (
     <div className={style.div_PokemonList}>
       <div className={style.div_botones}>
+
         <button className={currentPage === 0? style.boton_prev2 : style.boton_prev}  onClick={handlePrevPage} disabled={currentPage === 0}>
           PREVIOUS
         </button>
+
         <NumberList pageQuantity={pageQuantity} onPageChange={onPageChange} />
+
         <button className={currentPage === pageQuantity-1? style.boton_next2 : style.boton_next} onClick={handleNextPage} disabled={end > allPokemon.length - 1}>
           NEXT
         </button>
+        
       </div>
 
 
