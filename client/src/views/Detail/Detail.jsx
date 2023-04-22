@@ -40,7 +40,9 @@ const Detail = () => {
     navigate("../home")
   }
 
-
+  if (name) {
+    var nameCorrectly = name.charAt(0).toUpperCase() + name.slice(1)
+  }
 
 
   return (
@@ -49,11 +51,11 @@ const Detail = () => {
       {image ? (
         <>
         <div style={{color:"white", fontSize: "40px", display: "flex", alignItems:"end"}}>
-        <h3>{name}</h3>
+        <h3 className={style.nameTitle}>{nameCorrectly}</h3>
       </div>
         <div className={style.Detail_div}>
           <div>
-            <img src={image} alt={name} />
+            <img src={image} alt={nameCorrectly} />
           </div>
 
           <div className={style.name_caracteristicas}>

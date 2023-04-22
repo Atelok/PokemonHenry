@@ -1,28 +1,44 @@
 import style from "./Card.module.css";
 import { NavLink } from "react-router-dom";
+import sparkles from "./img/sparkles.gif"
+import fondito from "./img/holo.png"
+import banner from "./img/banner-dorado.png"
+
 
 const Card = ({ id, name, image, Types }) => {
 
 
-
+const nameCorrectly = name.charAt(0).toUpperCase() + name.slice(1)
 
   
 
   return (
     <>
-      <div className={style.div_general_card}>
+      <div className={`${Types[0]} ${style.div_general_card}`}>
         <NavLink className={style.NavLink_Card} to={`/detail/${id}`}>
           <div className={style.rango_Detail}>
-
             <div >
             {/* IMAGEN DE LA CARD */}
-            <div className={style.div_img_pokemon}>
+            <div className={`${Types[0]} ${style.div_img_pokemon}`}>
+              
+            <img className={style.banner}  src={banner} alt="banner" />  
+            <img className={style.sparkles_imagenGif} src={sparkles} alt="sparkles" />
+            <img className={style.fondito} src={fondito} alt="fondito" />
+              
+
+
+
+
+              <div className={`${Types[0]} ${style.circle}`}>
               <img
                 className={style.img_pokemon}
                 src={image}
                 alt={`Pokemons ${name}`
               }
               />
+
+              </div>
+
             </div>
             {/* #ID O #CREATED */}
             {isNaN(id) ? <div># Created </div> : <div style={{fontSize:"12px", fontFamily: "arial"}}> # {id} </div>}
@@ -30,25 +46,18 @@ const Card = ({ id, name, image, Types }) => {
 
             {/* NOMBRE DEL POKE */}
             <div>
-              <h4>{name}</h4>
+              <h4>{nameCorrectly}</h4>
             </div>
 
             {/* H4 DE TYPES */}
             <div className={style.nameCard}>
-              <h4>Types:</h4>
+              <h4 style={{margin:"6px"}}>Types:</h4>
             </div>
 
             {/* LOS TIPOS DE POKEMON */}
             <div className={style.div_types}>
               {/* AQUI VA LA VERIFICACION DE types y Types */}
-              {typeof Types[0] === "string" ? (
-                <>
-                  <div>{Types[0]}</div>
-                  <div>{Types[1]}</div>
-                </>
-              ) : (
-                ""
-              )}
+              {Types.map((tipo)=> <div className={`${tipo}`}>{tipo}</div> )}
             </div>
           </div>
         </NavLink>

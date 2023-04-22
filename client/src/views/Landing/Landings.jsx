@@ -8,7 +8,7 @@ import mewPoke from "./img/mew-Poke.png";
 import soundFile from "./sound/sonidoPika.mp3";
 import { seeImage, obtenerPokeNombre } from "../../Redux/Actions/action";
 import style from "./Landing.module.css";
-import imagePoke from "../Home/img/pokemon-maplerose.webp"
+
 
 const Landing = () => {
   const navigate = useNavigate();

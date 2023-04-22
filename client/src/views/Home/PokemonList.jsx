@@ -88,14 +88,17 @@ const PokemonList = ({ allPokemon, onPageChange, filterHandler }) => {
 
 
       <div className={style.cards_imagen}>
-        <div style={{width : "400px", paddingLeft: "20px"}}>
+        {/* <div style={{width : "0px", paddingLeft: "0px"}}>
           aqui va a ir una imagen
-        </div>
+        </div> */}
 
         <div>
           <Cards pokemonsToShow={pokemonsToShow} />
         </div>
 
+        {/* <div style={{width : "0px", paddingRight: "0px"}}>
+          aqui va a ir una imagen
+        </div> */}
       </div>
 
     </div>

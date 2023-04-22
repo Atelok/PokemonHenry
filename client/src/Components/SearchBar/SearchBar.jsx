@@ -17,11 +17,12 @@ const SearchBar = () => {
 
   // MI HANDLE PARA HACER DISPATCH DE MI ACTION FUNCION CON EL "ID"
   const getPokemonHandler = () => {
+    dispatch(setCurrentPage(0))
     dispatch(searchName(name));
   };
 
   //MI HANDLE PARA RANDOMEAR POKEMONS
-  
+    
   const getRandomPokemon = () => {
 
     dispatch(setCurrentPage(0))

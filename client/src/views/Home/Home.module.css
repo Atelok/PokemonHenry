@@ -42,7 +42,7 @@ html {
     justify-content: space-evenly;
     margin-left: 150px;
     align-items: center;
-    background-color: #00000077;
+    background-color: #00000096;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -56,7 +56,6 @@ html {
     outline-offset: -5px;
     /*distanciadelcontornointerior*/
     border: 1px solid #ccc;
-    
 
 }
 
@@ -65,7 +64,7 @@ html {
 .ordenar_Asc_Desc {
     display: flex;
     justify-content: flex-start;
-    
+
 }
 
 
@@ -86,7 +85,7 @@ html {
 /**/
 
 
-.div_filtrados{
+.div_filtrados {
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
@@ -95,8 +94,8 @@ html {
 
 
 .div_hola {
-height: 100px;
-/* max-height: 2vh; */
+    height: 100px;
+    /* max-height: 2vh; */
 }
 
 
@@ -123,7 +122,7 @@ height: 100px;
     align-items: center;
     padding-top: 10px;
     z-index: 5;
-    
+
 }
 
 .div_botones {
@@ -144,7 +143,7 @@ height: 100px;
     height: 150px;
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
+    justify-content: space-around;
     /* margin-top: 25px; */
 }
 
@@ -172,7 +171,7 @@ height: 100px;
 
 /*div de hola y de paginado*/
 .div_PokemonList {
-    
+
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -184,7 +183,8 @@ height: 100px;
 
 .cards_imagen {
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -338,18 +338,153 @@ select {
     height: 30px;
     background-color: #c97e7e49;
     border: 1px solid cc272769;
-    color: #cc2727;
+    color: #ff0000;
     padding: 0 5px;
     font-size: 14px;
     border-radius: 4px;
-  }
-  
-  /* select:hover, select:focus {
+}
+
+/* select:hover, select:focus {
     outline: none;
     border: 1px solid #666;
   }
    */
-  select option {
-    color: #cc2727be;
+select option {
+    color: #f11515be;
     background-color: #c97e7e49;
-  }
+}
+
+/* button{
+    height: 30px;
+    background-color: #c97e7e49;
+    border: 1px solid cc272769;
+    color: #ff0000;
+    padding: 0 5px;
+    font-size: 14px;
+    border-radius: 4px;
+  } */
+
+
+
+
+
+
+
+/*----------------------------------------------------------------*/
+
+/* :root {
+    colors types
+    --type-normal: #A8A878;
+    --type-fire: #F08030;
+    --type-water: #6890F0;
+    --type-grass: #78C850;
+    --type-electric: #F8D030;
+    --type-ice: #98D8D8;
+    --type-fighting: #C03028;
+    --type-poison: #A040A0;
+    --type-ground: #E0C068;
+    --type-flying: #A890F0;
+    --type-psychic: #F85888;
+    --type-bug: #A8B820;
+    --type-rock: #B8A038;
+    --type-ghost: #705898;
+    --type-dark: #705848;
+    --type-dragon: #7038F8;
+    --type-steel: #B8B8D0;
+    --type-fairy: #F0B6BC;
+} */
+
+
+/* segun los tipos los colores */
+
+/* .normal {
+    background-color: var(--type-normal);
+    color: var(--clr-black);
+}
+
+.fire {
+    background-color: var(--type-fire);
+    color: var(--clr-black);
+}
+
+.water {
+    background-color: var(--type-water);
+    color: var(--clr-white);
+}
+
+.grass {
+    background-color: var(--type-grass);
+    color: var(--clr-black);
+}
+
+.electric {
+    background-color: var(--type-electric);
+    color: var(--clr-black);
+}
+
+.ice {
+    background-color: var(--type-ice);
+    color: var(--clr-black);
+}
+
+.fighting {
+    background-color: var(--type-fighting);
+    color: var(--clr-white);
+}
+
+.poison {
+    background-color: var(--type-poison);
+    color: var(--clr-white);
+}
+
+.ground {
+    background-color: var(--type-ground);
+    color: var(--clr-black);
+}
+
+.flying {
+    background-color: var(--type-flying);
+    color: var(--clr-black);
+}
+
+.psychic {
+    background-color: var(--type-psychic);
+    color: var(--clr-black);
+}
+
+.bug {
+    background-color: var(--type-bug);
+    color: var(--clr-black);
+}
+
+.rock {
+    background-color: var(--type-rock);
+    color: var(--clr-black);
+}
+
+.ghost {
+    background-color: var(--type-ghost);
+    color: var(--clr-white);
+}
+
+.dark {
+    background-color: var(--type-dark);
+    color: var(--clr-white);
+}
+
+.dragon {
+    background-color: var(--type-dragon);
+    color: var(--clr-white);
+}
+
+.steel {
+    background-color: var(--type-steel);
+    color: var(--clr-black);
+}
+
+.fairy {
+    background-color: var(--type-fairy);
+    color: var(--clr-black);
+} */
+
+/*------------------------------------------------------------*/

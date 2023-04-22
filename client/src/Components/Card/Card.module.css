@@ -1,30 +1,122 @@
 .div_general_card {
     display: flex;
     flex-direction: column;
-    /*border: 1px solid red;
-    *//*background-color: red;
-    */width: 200px;
+    width: 200px;
     height: 310px;
     margin-right: 20px;
     margin-left: 20px;
     justify-content: center;
     align-items: center;
-    /*opcion1*/
-    /*border-radius: 23px;
-    background: #e8eb47;
-    box-shadow: inset -5px -5px 10px #aeb035,        inset 5px 5px 10px #ffff59;
-
-
-    *//*opcion2*/
     border-radius: 27px;
-    background: #e1e273;
-    box-shadow: 5px 5px 2px #5a5a2e,        -5px -5px 2px #ffffb8;
-    outline: 2px solid #ccc;
-    /*contornoexterior*/
+    box-shadow: 3px 3px 1px #5a5a2e, -2px -2px 1px #ffffb8;
+    outline: 2px solid #ffffff;
     outline-offset: -5px;
-    /*distanciadelcontornointerior*/
+    position: relative;
     padding: 10px;
+    z-index: 4;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
+
+
+.div_general_card:hover{
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    -o-transform: scale(1.07);
+}
+
+
+
+
+
+
+
+.div_img_pokemon {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    justify-content: center;
+    box-shadow: 0 0 13px 6px #ffffffcc;
+    z-index: 5;
+    
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 3;
+    /* background-color: #ffffff; */
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;  
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.sparkles_imagenGif{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.2;
+    position: absolute;
+    top:0;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.fondito{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.1;
+    position: absolute;
+    top:0;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+.banner{
+    z-index: -1;
+    opacity: 1;
+    position: absolute;
+    border-radius: 25px 25px 0px 0px;
+    top:0;
+    width: 100%;
+    height: 25%;
+    -webkit-border-radius: 25px 25px 0px 0px;
+    -moz-border-radius: 25px 25px 0px 0px;
+    -ms-border-radius: 25px 25px 0px 0px;
+    -o-border-radius: 25px 25px 0px 0px;
+}
+
+
+
+
+
+
+
+
+
 
 .NavLink_Card {
     text-decoration: none;
@@ -53,35 +145,30 @@
 
 /**/
 
-.div_img_pokemon {
-    display: flex;
-    width: 100px;
-    height: 100px;
-    border: 2px solid rgb(230, 255, 3);
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    justify-content: center;
-    box-shadow: 0 0 8px 4px #eed709af;
-}
-
-
-
-
 
 .img_pokemon {
     width: 80px;
     height: 90px;
+    
+    /*darle contorno a la imagen*/
+    filter: drop-shadow(6px 3px 5px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(6px 3px 5px rgba(0,0,0,0.5));
 }
 
 .div_types {
     display: flex;
-
+    border: 1px solid rgb(204, 204, 199);
+    outline: 1px solid #c9cacc;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .div_types div {
     padding-right: 7px;
     padding-left: 7px;
+    border-radius: 10px;
 }
+
