@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import NumberList from "./numberList.jsx";
 import OrderPokemon from "./OrderPokemon.jsx";
 import FilterPokemons from "./FilterPokemon.jsx";
-import { useEffect } from "react";
+
 
 
 const PokemonList = ({ allPokemon, onPageChange, filterHandler }) => {
@@ -27,28 +27,6 @@ const PokemonList = ({ allPokemon, onPageChange, filterHandler }) => {
   const handlePrevPage = () => {
     onPageChange(currentPage - 1);
   };
-
-  //FUNCION PARA TOTAL DE PAGINADO
-  
-  // const totalPaginado = ()=>{
-
-
-  // }
-
-
-
-  // useEffect(() => {
-  //   first
-  
-  //   return () => {
-  //     second
-  //   }
-  // }, [third])
-  
-
-
-
-  
 
   return (
     <div className={style.div_PokemonList}>
@@ -82,7 +60,7 @@ const PokemonList = ({ allPokemon, onPageChange, filterHandler }) => {
 
 
         <div className={style.div_boton_refresh}>
-          <button name="refreshAll" onClick={filterHandler}>
+          <button name="refreshAll" onClick={filterHandler} className={style.boton_Refresh}>
             REFRESH
           </button>
         </div>

@@ -20,6 +20,8 @@ const InputsForm2 = ({
   return (
     <div className={style.cuadro_Form}>
       <form className={style.loquecontieneel_Form} onSubmit={submitHandler}>
+
+
         <div >
           <label htmlFor="" className={style.div1}> Ingresa un nombre(*): </label>
           <input
@@ -31,6 +33,7 @@ const InputsForm2 = ({
           />
           {errors.name && <span className={style.div17}>{errors.name}</span>}
         </div>
+        
 
         <div>
           <label htmlFor="" className={style.div2}> Inserte una imagen(*): </label>

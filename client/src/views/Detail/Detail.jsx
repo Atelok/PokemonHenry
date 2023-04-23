@@ -55,7 +55,7 @@ const Detail = () => {
       </div>
         <div className={style.Detail_div}>
           <div>
-            <img src={image} alt={nameCorrectly} />
+            <img className={style.image} src={image} alt={nameCorrectly} />
           </div>
 
           <div className={style.name_caracteristicas}>
@@ -82,18 +82,18 @@ const Detail = () => {
                 </div>
                 <div className={style.div_caract}>
                   <span className={style.div_caract_span}>Height: </span>
-                  <span>{height} mts.</span>
+                  <span>{height} m.</span>
                 </div>
                 <div className={style.div_caract}>
                   <span className={style.div_caract_span}>Weight: </span>
-                  <span>{weight} kgs.</span>
+                  <span>{weight} kg.</span>
                 </div>
               </div>
 
               <div className={style.part_caracteristicas}>
                 <div className={style.div_caract}>
                   <span className={style.div_caract_span}>Types: </span>
-                  <div>
+                  <div style={{paddingBottom:"10px"}}>
                     1{") "}
                     {Types[0]}
                   </div>
@@ -111,7 +111,7 @@ const Detail = () => {
         <Pokebola/>
       )}
 
-      <div>
+      <div className={style.div_button}>
         <button onClick={backToHomeHandler}>{"<"} Regresar</button>
       </div>
 

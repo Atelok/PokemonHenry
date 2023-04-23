@@ -63,7 +63,62 @@ html {
 /* ORDENAR ASCEDENTE Y DESCENDENTE*/
 .ordenar_Asc_Desc {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+
+}
+
+.div_button_order {
+    display: inline-block;
+    margin: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #596157, #292122);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px #8d8d8d;
+    transition: all 0.2s ease-in-out;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.div_button_order:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 6px 0px #8d8d8d;
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+}
+
+.div_button_order:active {
+    transform: translateY(0px);
+    box-shadow: none;
+    background-image: linear-gradient(to bottom right, #000000, #acb4b6);
+}
+
+.div_button_order:before,
+.div_button_order:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.div_button_order:before {
+    top: -3px;
+    left: -3px;
+    border-radius: 40px;
+
+}
+
+.div_button_order:after {
+    bottom: -3px;
+    right: -3px;
+    border-radius: 40px;
 
 }
 
@@ -80,6 +135,7 @@ html {
     /* background-color: #55aaff; */
     height: 20px;
     justify-content: space-around;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 /**/
@@ -90,6 +146,10 @@ html {
     justify-content: space-between;
     padding: 0 10px;
 }
+
+
+
+
 
 
 
@@ -144,6 +204,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     /* margin-top: 25px; */
 }
 
@@ -175,6 +236,7 @@ html {
     display: flex;
     flex-direction: column;
     height: 100vh;
+
 
 }
 
@@ -228,7 +290,7 @@ html {
     height: 100%;
     top: 0;
     transition: transform .4s ease-in-out;
-    background: linear-gradient(to right, transparent 1%, #58635d99 40%, #a7b4ae33 60%, transparent 100%);
+    background: linear-gradient(to right, transparent 1%, #1fd7e8df 40%, #1fd7e8df 60%, transparent 100%);
 }
 
 .boton_prev:hover:before {
@@ -307,11 +369,15 @@ html {
     height: 100%;
     top: 0;
     transition: transform .4s ease-in-out;
-    background: linear-gradient(to right, transparent 1%, #58635d99 40%, #a7b4ae33 60%, transparent 100%);
+    background: linear-gradient(to right, transparent 1%, #1fd7e8df 40%, #1fd7e8df 60%, transparent 100%);
 }
 
 .boton_next:hover:before {
     transform: translateX(15em);
+    -webkit-transform: translateX(15em);
+    -moz-transform: translateX(15em);
+    -ms-transform: translateX(15em);
+    -o-transform: translateX(15em);
 }
 
 /**/
@@ -338,6 +404,8 @@ html {
 }
 
 /**/
+
+
 
 
 select {
@@ -377,6 +445,56 @@ select option {
 
 
 /*----------------------------------------------------------------*/
+.boton_Refresh {
+    background-color: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
 
+.boton_Refresh::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, red, #eaff00, #22ff00, blue, red, #eaff00, #22ff00, blue, red);
+    background-size: 800%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    -webkit-animation: glowing 20s linear infinite;
+}
+
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
 
 /*------------------------------------------------------------*/

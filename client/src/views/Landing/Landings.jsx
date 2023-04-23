@@ -76,11 +76,12 @@ const Landing = () => {
         </div>
 
         <div className={style.div_principal_landing}>
-          <h1 className={style.h1_landing}>MARAVILLATE {">"}</h1>
+          <h1 className={style.h1_landing}>Welcome! {">"}</h1>
           <div className={style.boton_landing_to_home}>
             <button onClick={toGohandle}>Enter</button>
           </div>
         </div>
+
       </div>
 
       <div className={style.divArticle}>

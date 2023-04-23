@@ -2,8 +2,7 @@
 .div_general{
     display: flex;
     /*border: 1px solid rgb(185, 44, 44);
-    */
-    background-color: rgba(252, 249, 249, 0.548);
+    */background-color: rgba(252, 249, 249, 0.548);
     border-radius: 10px;
     flex-direction: column;
     flex-wrap: wrap;
@@ -18,27 +17,43 @@
     margin-top: 50px;
     /*margin-left: 10px;
     *//*padding-top: 5px;
-    */
-    outline: 2px solid #ccc;
-    /*contornoexterior*/
-    outline-offset: -5px;
-    /*distanciadelcontornointerior*/
-    border: 1px solid #ccc;
+    */outline: 2px solid #ccc;
+    /*contornoexterior*/outline-offset: -5px;
+    /*distanciadelcontornointerior*/border: 1px solid #ccc;
     padding: 10px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    
 }
 
 .justi_div{
-    /* margin-top: 20px; */
-    /* padding-top: 5px; */
-    display: flex;
-    /* max-width: 100%; */
-    height: auto;
+    /*margin-top: 20px;
+    *//*padding-top: 5px;
+    */display: flex;
+    /*max-width: 100%;
+    */height: auto;
     flex-wrap: wrap;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
+
+
+
 
 .cada_div{
     padding-top: 5px ;
     padding-bottom: 15px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 

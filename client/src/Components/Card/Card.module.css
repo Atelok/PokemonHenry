@@ -21,8 +21,30 @@
     -o-transition: all 0.2s ease-in-out;
     background-image: linear-gradient(125deg, #ff00843b 15%, #fca40028 30%, #ffff0023 40%, #00ff8821 60%, #00d0ff2a 70%, #cc4cfa31 85%);
     filter: brightness(1.1) contrast(1.1);
-    -webkit-filter: brightness(1.1) contrast(1.1);
+    -webkit-filter: brightness(1.1) contra  st(1.1);
+    transition: all 0.5s ease;
 }
+
+
+.name{
+    color: white;
+    text-shadow: -1px -1px 0 #783802, 1px -1px 0 #783802, -1px 1px 0 #783802, 1px 1px 0 #783802;
+    font-size: 20px;
+    font-family: Monserrat;
+    transition: all 0.3s ease;
+}
+
+.Types{
+    color: white;
+    text-shadow: -1px -1px 0 #783802, 1px -1px 0 #783802, -1px 1px 0 #783802, 1px 1px 0 #783802;
+    transition: all 0.3s ease;
+}
+
+.tipos{
+    color: white;
+    transition: all 0.3s ease;
+}
+
 
 
 .div_general_card:hover{
@@ -33,6 +55,7 @@
     -o-transform: scale(1.07);
     filter: brightness(1.15) contrast(1.15);
     -webkit-filter: brightness(1.15) contrast(1.15);
+    
 }
 
 
@@ -54,7 +77,11 @@
     justify-content: center;
     box-shadow: 0 0 12px 5px #ffffffcc;
     z-index: 5;
-    
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
 
 .circle {
@@ -62,13 +89,18 @@
     height: 100%;
     border-radius: 50%;
     z-index: 3;
-    /* background-color: #ffffff; */
-    -webkit-border-radius: 50%;
+    /*background-color: #ffffff;
+    */-webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
-    -o-border-radius: 50%;  
+    -o-border-radius: 50%;
     display: flex;
     justify-content: center;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
 
 
@@ -87,6 +119,7 @@
     -o-border-radius: 25px;
     filter: brightness(1.2) contrast(1.5);
     -webkit-filter: brightness(1.2) contrast(1.5);
+    transition: all 0.5s ease;
 }
 
 .fondito{
@@ -101,6 +134,7 @@
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
+    transition: all 0.5s ease;
 }
 .banner{
     filter: brightness(1.1) contrast(1.1);
@@ -116,6 +150,7 @@
     -ms-border-radius: 25px 25px 0px 0px;
     -o-border-radius: 25px 25px 0px 0px;
     -webkit-filter: brightness(1.1) contrast(1.1);
+    transition: all 0.5s ease;
 }
 
 
@@ -129,6 +164,11 @@
 
 .NavLink_Card {
     text-decoration: none;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
 
 
@@ -141,6 +181,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 /*-------------------------*/
@@ -150,6 +191,11 @@
 /* AQUI VA EL DIV DE NAME: NAME*/
 .nameCard {
     display: inline;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
 
 /**/
@@ -158,10 +204,13 @@
 .img_pokemon {
     width: 80px;
     height: 90px;
-    
-    /*darle contorno a la imagen*/
-    filter: drop-shadow(6px 3px 5px rgba(0,0,0,0.5));
+    /*darlecontornoalaimagen*/filter: drop-shadow(6px 3px 5px rgba(0,0,0,0.5));
     -webkit-filter: drop-shadow(6px 3px 5px rgba(0,0,0,0.5));
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
 
 .div_types {

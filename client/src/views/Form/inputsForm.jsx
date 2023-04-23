@@ -24,6 +24,7 @@ const InputsForm = ({
   return (
   <div className={style.cuadro_Form}>
     <form className={style.loquecontieneel_Form} onSubmit={submitHandler}>
+      
       <div>
         <label htmlFor=""> Ingresa un nombre(*): </label>
         <input
@@ -51,7 +52,7 @@ const InputsForm = ({
         <input
           type="range"
           min={1}
-          max={100}
+          max={200}
           name="life"
           value={form.life}
           onChange={valueInputhandler}
@@ -65,7 +66,7 @@ const InputsForm = ({
         <input
           type="range"
           min={1}
-          max={100}
+          max={200}
           name="attack"
           value={form.attack}
           onChange={valueInputhandler}
@@ -79,7 +80,7 @@ const InputsForm = ({
         <input
           type="range"
           min={1}
-          max={100}
+          max={200}
           name="defense"
           value={form.defense}
           onChange={valueInputhandler}
@@ -93,7 +94,7 @@ const InputsForm = ({
         <input
           type="range"
           min={1}
-          max={100}
+          max={200}
           name="velocity"
           value={form.velocity}
           onChange={valueInputhandler}

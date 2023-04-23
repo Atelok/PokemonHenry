@@ -6,7 +6,7 @@ import banner from "./img/banner-dorado.png"
 import Pokebola from "../../extras/loaderPokebola"
 
 
-const Card = ({ id, name, image, Types }) => {
+const Card = ({ id, name, image, Types, verify }) => {
 
 
 const nameCorrectly = name.charAt(0).toUpperCase() + name.slice(1)
@@ -15,7 +15,7 @@ const nameCorrectly = name.charAt(0).toUpperCase() + name.slice(1)
 
   return (
     <>
-      {image? (<div className={`${Types[0]} ${style.div_general_card}`}>
+      {verify && image? (<div className={`${Types[0]} ${style.div_general_card}`}>
         <NavLink className={style.NavLink_Card} to={`/detail/${id}`}>
           <div className={style.rango_Detail}>
             <div >
@@ -47,18 +47,18 @@ const nameCorrectly = name.charAt(0).toUpperCase() + name.slice(1)
 
             {/* NOMBRE DEL POKE */}
             <div>
-              <h4>{nameCorrectly}</h4>
+              <h4 className={style.name}>{nameCorrectly}</h4>
             </div>
 
             {/* H4 DE TYPES */}
             <div className={style.nameCard}>
-              <h4 style={{margin:"6px"}}>Types:</h4>
+              <h4 className={style.Types}>Types:</h4>
             </div>
 
             {/* LOS TIPOS DE POKEMON */}
             <div className={style.div_types}>
               {/* AQUI VA LA VERIFICACION DE types y Types */}
-              {Types.map((tipo)=> <div className={`${tipo}`}>{tipo}</div> )}
+              {Types.map((tipo)=> <div className={`${tipo} ${style.tipos}`}>{tipo}</div> )}
             </div>
           </div>
         </NavLink>
