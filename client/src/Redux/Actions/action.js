@@ -72,6 +72,7 @@ const ourPokemons = (pokemon)=>{
 //FILTRADO POR QUERY NAMES
 const searchName = (name)=>{
 
+    
     return async function(dispatch){
         const json = await axios.get(`http://localhost:3001/pokemons/name?name=${name}`)
         const pokemon = json.data

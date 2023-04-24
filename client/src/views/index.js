@@ -5,10 +5,11 @@ import Detail from "./Detail/Detail";
 import About from "./About/About";
 
 
+
 export {
     Landing,
     Home,
     Form,
     Detail,
-    About
+    About,
 }

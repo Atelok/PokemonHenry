@@ -1,6 +1,6 @@
 
 import {Routes, Route, useLocation} from "react-router-dom"
-import {Landing, Home, Form, Detail, About} from "./views/index.js"
+import {Landing, Home, Form, Detail, About, } from "./views/index.js"
 import NavBar from './Components/Nav/NavBar';
 
 function App() {

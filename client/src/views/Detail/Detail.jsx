@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import style from "./Details.module.css";
 import { useNavigate } from "react-router-dom";
 import Pokebola from "../../extras/loaderPokebola";
+import {heart, heightx, running_shoe, shield, sword, weightx} from "./imagenesSVG"
+
 
 const Detail = () => {
   const { id } = useParams();
@@ -62,31 +64,43 @@ const Detail = () => {
             <div className={style.Div_caracteristicas}>
               <div className={style.part_caracteristicas}>
                 <div className={style.div_caract}>
-                  <span className={style.div_caract_span}>Life: </span>
-                  <span>{life}</span>
+                  <span className={style.div_caract_span}>
+                    <img src={heart} alt="heart" style={{width: "20px", height: "20px"}}/> {" "} 
+                      Life: </span>
+                  <span style={{display:"flex", justifyContent:"center"}}>{life}</span>
                 </div>
                 <div className={style.div_caract}>
-                  <span className={style.div_caract_span}>Ataque: </span>
-                  <span>{attack}</span>
+                  <span className={style.div_caract_span}>
+                    <img src={sword} alt="sword" style={{width: "20px", height: "20px"}}/>{" "} 
+                      Ataque: </span>
+                  <span style={{display:"flex", justifyContent:"center"}}>{attack}</span>
                 </div>
                 <div className={style.div_caract}>
-                  <span className={style.div_caract_span}>Defense: </span>
-                  <span>{defense}</span>
+                  <span className={style.div_caract_span}>
+                  <img src={shield} alt="shield" style={{width: "20px", height: "20px"}}/>{" "} 
+                      Defense: </span>
+                  <span style={{display:"flex", justifyContent:"center"}}>{defense}</span>
                 </div>
               </div>
 
               <div className={style.part_caracteristicas}>
                 <div className={style.div_caract}>
-                  <span className={style.div_caract_span}>Velocity: </span>
-                  <span>{velocity}</span>
+                  <span className={style.div_caract_span}>
+                  <img src={running_shoe} alt="running_shoe" style={{width: "20px", height: "20px"}}/>{" "} 
+                      Velocity: </span>
+                  <span style={{display:"flex", justifyContent:"center"}}>{velocity}</span>
                 </div>
                 <div className={style.div_caract}>
-                  <span className={style.div_caract_span}>Height: </span>
-                  <span>{height} m.</span>
+                  <span className={style.div_caract_span}>
+                  <img src={heightx} alt="height" style={{width: "20px", height: "20px"}}/>{" "} 
+                      Height: </span>
+                  <span style={{display:"flex", justifyContent:"center"}}>{height} m.</span>
                 </div>
                 <div className={style.div_caract}>
-                  <span className={style.div_caract_span}>Weight: </span>
-                  <span>{weight} kg.</span>
+                  <span className={style.div_caract_span}>
+                  <img src={weightx} alt="weight" style={{width: "20px", height: "20px"}}/>  {" "} 
+                      Weight: </span>
+                  <span style={{display:"flex", justifyContent:"center"}}>{weight} kg.</span>
                 </div>
               </div>
 

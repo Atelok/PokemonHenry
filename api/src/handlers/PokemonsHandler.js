@@ -3,7 +3,7 @@ const getPokemonByiD = require("../Controllers/getPokemon")
 const getPokemonByName = require("../Controllers/getPokemonbyName")
 const getAllPokemons =  require("../Controllers/getAllPokemons")
 
-// -------------------------1-------------------------//
+// -------------------------1) Obtener todos los Pokemons-------------------------//
 
 const getPokemonsHandler = async (req, res) => {
 
@@ -19,7 +19,7 @@ const getPokemonsHandler = async (req, res) => {
 
 
 
-// -------------------------2-------------------------//
+// -------------------------2) Obtener Pokemon por nombre-------------------------//
 
 
 const getSamePokemonHandler = async (req, res) => {
@@ -37,7 +37,7 @@ try {
 
 //----Los de arriba se pueden fusionar-------//
 
-// -------------------------3-------------------------//
+// -------------------------3) Obtener Pokemon by ID-------------------------//
 
 const getPokemonhandler = async (req, res) => {
     const { idPokemon } = req.params;
@@ -54,7 +54,8 @@ const getPokemonhandler = async (req, res) => {
 
 
 
-// -------------------------4-------------------------//
+// -------------------------4) Create Pokemon-------------------------//
+
 const createPokemonHandler = async (req, res) => {
     const { id, name, image, life, attack, defense, velocity, height, weight, Types } = req.body;
     

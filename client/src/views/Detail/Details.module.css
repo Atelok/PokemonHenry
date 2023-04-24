@@ -1,18 +1,30 @@
-
-.div_general_detail{
+.div_general_detail {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fedein 2s;
+    
 }
 
+@keyframes fedein {
+    from {
+        opacity: 0;
+    }
 
-.image{
+    to {
+        opacity: 1;
+    }
+}
+
+.image {
     filter: drop-shadow(10px 5px 7px rgba(0, 0, 0, 0.808));
     -webkit-filter: drop-shadow(10px 5px 7px rgba(0, 0, 0, 0.808));
+    max-width: 500px;
+    max-height: 500px;
 }
 
-.Detail_div{
+.Detail_div {
     /* background-color: blueviolet; */
     display: flex;
     align-items: center;
@@ -24,7 +36,7 @@
 
 
 
-.Div_caracteristicas{
+.Div_caracteristicas {
     display: flex;
     flex-direction: row;
     /* padding: 0px 20px; */
@@ -36,36 +48,38 @@
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
     background-color: #30a7d7;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
 
 }
 
-.name_caracteristicas{
-display: flex;
-color: aliceblue;
-font-weight: bolder;
-height: 250px;
-width: 100%;
+.name_caracteristicas {
+    display: flex;
+    color: aliceblue;
+    font-weight: bolder;
+    height: 250px;
+    width: 100%;
+    
 }
 
-.part_caracteristicas{
+.part_caracteristicas {
     padding: 13px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.div_caract{
+.div_caract {
     display: flex;
     flex-direction: column;
 }
 
 /*span menor*/
-.div_caract_span{
+.div_caract_span {
     color: black;
     padding-bottom: 5px;
 }
 
-.nameTitle{
+.nameTitle {
     -webkit-text-stroke: 2px #000000;
     text-shadow: 0px 0px 18px #3e59cf;
     filter: drop-shadow(5px 2px 4px rgba(143, 25, 25, 0.4));
@@ -75,7 +89,29 @@ width: 100%;
 
 
 /*div del boton*/
-.div_button{
-    z-index: 1;
+.div_button {
+    z-index: 2;
+    margin-top: 15px;
 }
+
+.div_button button {
+
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
+
+}
+
+.div_button button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+        inset -4px -4px 12px #ffffff;
+}
+
 /**/

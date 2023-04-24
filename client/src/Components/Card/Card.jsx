@@ -15,7 +15,7 @@ const nameCorrectly = name.charAt(0).toUpperCase() + name.slice(1)
 
   return (
     <>
-      {verify && image? (<div className={`${Types[0]} ${style.div_general_card}`}>
+      {verify && image && name? (<div className={`${Types[0]} ${style.div_general_card}`}>
         <NavLink className={style.NavLink_Card} to={`/detail/${id}`}>
           <div className={style.rango_Detail}>
             <div >
@@ -37,12 +37,11 @@ const nameCorrectly = name.charAt(0).toUpperCase() + name.slice(1)
                 alt={`Pokemons ${name}`
               }
               />
-
               </div>
 
             </div>
             {/* #ID O #CREATED */}
-            {isNaN(id) ? <div># Created </div> : <div style={{fontSize:"12px", fontFamily: "arial"}}> # {id} </div>}
+            {isNaN(id) ? <div className={style.id_Poke}># Created </div> : <div className={style.id_Poke}> # {id} </div>}
             </div>
 
             {/* NOMBRE DEL POKE */}
