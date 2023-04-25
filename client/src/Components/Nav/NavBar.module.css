@@ -90,7 +90,8 @@
 
 /* VERIFICAR DONDE ESTOY */
 
-.is_active {
+.Nav_Bar2 {
     font-weight: bold;
     pointer-events: none;
+    color: red;
 }

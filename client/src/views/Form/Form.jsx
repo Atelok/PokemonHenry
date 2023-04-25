@@ -4,7 +4,7 @@ import style from "./Form.module.css";
 import { useSelector } from "react-redux";
 import InputsForm from "./inputsForm.jsx";
 // import InputsForm2 from "./Form1";
-import pikachu from "./img/Creacion-Poke-Defecto.png";
+
 import useForm from "./UseForm";
 import charmander from "./img/charmander.png";
 
@@ -19,7 +19,7 @@ import Alert from "../../extras/alert";
 // Formulario inicial
 const initialForm = {
   name: "",
-  image: `${pikachu}`,
+  image: ``,
   life: 50,
   attack: 50,
   defense: 50,
@@ -61,7 +61,7 @@ const Form = () => {
   const {
     form,
     errors,
-
+    setForm,
     handleChange,
     handleBlur,
     handleSubmit,
@@ -74,7 +74,7 @@ const Form = () => {
 
   return (
     <div className={style.div_generalDelForm}>
-      <div style={{color: "red", fontSize: "25  px", paddingBottom: "15px"}}>Crearemos nuestro Pokemón</div>
+      <div style={{color: "red", fontSize: "30px", paddingBottom: "15px"}}>Crearemos nuestro Pokemón</div>
       <InputsForm
         form={form}
         errors={errors}
@@ -83,10 +83,11 @@ const Form = () => {
         handleChange={handleChange}
         typesPokemon={typesPokemon}
         introduceTypeHandle={introduceTypeHandle}
+        setForm = {setForm}
       />
       {/* <InputsForm2 form={form} submitHandler={submitHandler} errors={errors} valueInputhandler= {valueInputhandler} typesPokemon={typesPokemon} introduceTypeHandle={introduceTypeHandle}/> */}
 
-      <h6> (*) Se deben rellenar obligatoriamente</h6>
+      <h6 style={{fontSize: "15px"}}> (*) Se deben rellenar obligatoriamente</h6>
       <div className={style.charmander}><img src={charmander} alt="charmander" /></div>
 
     </div>

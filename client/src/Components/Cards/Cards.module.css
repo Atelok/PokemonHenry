@@ -14,19 +14,19 @@
     height: 100%;
     /*max-width: 1600px;
     */padding-left: 5px;
-    margin-top: 50px;
     /*margin-left: 10px;
     *//*padding-top: 5px;
     */outline: 2px solid #ccc;
     /*contornoexterior*/outline-offset: -5px;
     /*distanciadelcontornointerior*/border: 1px solid #ccc;
     padding: 10px;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     margin-left: 32px;
+    margin-top: 70px;
     animation: fedein 2s;
 }
 
@@ -48,12 +48,12 @@
     /*max-width: 100%;
     */height: auto;
     flex-wrap: wrap;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
 
 
@@ -62,11 +62,11 @@
 .cada_div{
     padding-top: 5px ;
     padding-bottom: 15px;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 

@@ -31,3 +31,4 @@ const NavBar = ()=>{
 }
 
 export default NavBar
+// ({ isActive }) => (isActive ? style.is_active : "")

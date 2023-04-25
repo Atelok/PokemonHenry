@@ -1,19 +1,23 @@
 import style from "./Form.module.css";
+import pikachu from "./img/Creacion-Poke-Defecto.png";
 
-const InputsForm = ({
-  form,
-  submitHandler,
-  errors,
-  handleChange,
-  typesPokemon,
-  introduceTypeHandle,
-  handleBlur,
-}) => {
+const InputsForm = ({ form, submitHandler, errors, handleChange, typesPokemon, introduceTypeHandle, handleBlur, setForm}) => {
+
   const arrayType = [];
 
   for (let i = 1; i <= typesPokemon.length; i++) {
     arrayType.push(`${i}`);
   }
+
+
+
+  const randomHandle = ()=>{
+
+    setForm({...form, image:`${pikachu}`})
+  }
+
+
+
 
 
   return (
@@ -35,7 +39,7 @@ const InputsForm = ({
             <p style={{position: "absolute"}}>{errors.name}</p>
           )}
         </div>
-
+            <div>
         <div style={{paddingBottom : "40px"}}>
           <label htmlFor=""> Inserte una imagen(*): </label>
           <input
@@ -51,9 +55,11 @@ const InputsForm = ({
           />
           {errors.image && (
             <p style={{position: "absolute"}}>{errors.image}</p>
-          )}
+            )}
+            
         </div>
-
+        <button type="button" onClick={randomHandle} className={style.btn_Default}>Default</button>
+        </div>
 
 
       <div>

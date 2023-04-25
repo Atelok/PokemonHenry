@@ -26,7 +26,7 @@ const Home = () => {
     } catch (error) {
       throw Error("Algo salio mal");
     }
-
+  
   }, [dispatch]);
 
   const filterHandler = (event) => {
@@ -38,7 +38,9 @@ const Home = () => {
     dispatch(setCurrentPage(newPage));
   };
 
+
   const namePokemaster = useSelector((state)=>state.namePokemaster)
+
   return (
     <div className={style.PokemonList}>
 

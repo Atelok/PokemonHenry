@@ -11,6 +11,7 @@ const getAllPokemons = ()=>{
         
         return dispatch({type:GET_ALL_POKEMONS, payload: pokemon});
     }
+
 };
 
 

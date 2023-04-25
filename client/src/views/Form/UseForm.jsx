@@ -57,7 +57,7 @@ const useForm = (initialForm, validationsForm) => {
   return {
     form,
     errors,
-
+    setForm,
     handleChange,
     handleBlur,
     handleSubmit,
