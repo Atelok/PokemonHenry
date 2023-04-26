@@ -28,6 +28,10 @@ const PokemonList = ({ allPokemon, onPageChange, filterHandler }) => {
     onPageChange(currentPage - 1);
   };
 
+
+
+  
+
   return (
     <div className={style.div_PokemonList}>
       <div className={style.div_botones}>

@@ -2,6 +2,7 @@ const createPokemon = require("../Controllers/CreatePokemon")
 const getPokemonByiD = require("../Controllers/getPokemon")
 const getPokemonByName = require("../Controllers/getPokemonbyName")
 const getAllPokemons =  require("../Controllers/getAllPokemons")
+const deletePokemon = require("../Controllers/deletePokemon")
 
 // -------------------------1) Obtener todos los Pokemons-------------------------//
 
@@ -71,4 +72,22 @@ const createPokemonHandler = async (req, res) => {
 
 
 
-module.exports = { getPokemonsHandler, getSamePokemonHandler, getPokemonhandler, createPokemonHandler }
+//---------DeletePokemon----------//
+
+const deletePokemonHandler = async (req, res)=>{
+    const {name} = req.body;
+
+    try {
+        const deleted = await deletePokemon(name)
+        res.status(201).json ({message: "Pokemon liberado correctamente"})
+        
+    } catch (error) {
+        
+        res.status(404).json ({message: error.message})
+    }
+
+}
+
+
+
+module.exports = { getPokemonsHandler, getSamePokemonHandler, getPokemonhandler, createPokemonHandler, deletePokemonHandler }

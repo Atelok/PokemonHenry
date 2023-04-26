@@ -12,6 +12,8 @@ const NumberList = ({ pageQuantity, onPageChange }) => {
     onPageChange(num);
   };
 
+  
+
   return (
     <ul className={style.paginado_Ul}>
       {array.map((num) => {

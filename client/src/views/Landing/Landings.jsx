@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { Howl } from "howler";
+// import { Howl } from "howler";
 import Article from "./ArticlePok/ArticlePok";
 import gotta from "./img/Logo y frase -Pokemon.png";
 import mewPoke from "./img/mew-Poke.png";
-import soundFile from "./sound/sonidoPika.mp3";
+// import soundFile from "./sound/sonidoPika.mp3";
 import { seeImage, obtenerPokeNombre } from "../../Redux/Actions/action";
 import style from "./Landing.module.css";
 
@@ -16,10 +16,10 @@ const Landing = () => {
   // Enviar a /home y reproducir pika
   const toGohandle = () => {
     navigate("/home");
-    const sound = new Howl({
-      src: [soundFile],
-    });
-    sound.play();
+    // const sound = new Howl({
+    //   src: [soundFile],
+    // });
+    // sound.play();
   };
 
 

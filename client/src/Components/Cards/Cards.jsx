@@ -20,6 +20,7 @@ useEffect(() => {
 
 
 
+
   return (
     <>
       {verify && pokemonsToShow.length? (
