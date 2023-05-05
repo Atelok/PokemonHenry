@@ -9,6 +9,6 @@ const port = process.env.PORT || 3001
 // "alter" va a modificar y sincronizar sin tirarse la barra entera force
 conn.sync({ force: false }).then(() => {
   server.listen(port, () => {
-    console.log('Server is listening at 3001'); // eslint-disable-line no-console
+    console.log(`Server is listening at ${port}`); // eslint-disable-line no-console
   });
 });
